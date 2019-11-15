@@ -1,20 +1,21 @@
-# Final Project: Before You Can Start!
+# Final Project: Ship Ship!
 
-## TODO: Submit your wireframes in the form of a pull request
+<!-- ## TODO: Submit your wireframes in the form of a pull request -->
 
-This example wireframe lives in `readme_assets/wireframe_example.jpg`
+This example wireframe lives in `readme_assets/ShipShip_wireframe.png`
 
-Swap it out with your actual wireframes...
+<!-- Swap it out with your actual wireframes... -->
 
-![Wireframe Example](readme_assets/wireframe_example.jpg)
+![Wireframe Example](readme_assets/ShipShip_wireframe.png)
 
-## TODO: Submit your ERD in the form of a pull request
+<!-- ## TODO: Submit your ERD in the form of a pull request -->
 
-This example Entity Relational Diagram lives in `readme_assets/erd_example.png`
+This example Entity Relational Diagram lives in `readme_assets/ShipShip_ERD.png`
 
-![ERD Example](readme_assets/erd_example.png)
+![ERD Example](readme_assets/ShipShip_ERD.png)
 
-Swap it out with your actual ERD...
+<!-- Swap it out with your actual ERD... -->
+### You can see more images if you visit `readme/assets/`
 
 # README
 
