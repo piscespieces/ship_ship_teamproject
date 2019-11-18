@@ -1,0 +1,32 @@
+  <%= keys = @shipment.keys%>
+
+<div>
+  <h3>Shipment</h3>
+  <%= @shipment[:from_address][:street1] %>
+  <%= @shipment[:from_address][:street2] %>
+  <%= @shipment[:from_address][:city] %>
+  <%= @shipment[:from_address][:zip] %>
+  <%= @shipment[:from_address][:city] %>
+
+<div>
+<h3> Package Information
+  <%= @shipment[:parcel][:id] %>
+  <%= @shipment[:parcel][:created_at] %>
+  <%= @shipment[:parcel][:length] %>
+  <%= @shipment[:parcel][:length] %>
+  <%= @shipment[:parcel][:width] %>
+  <%= @shipment[:parcel][:predefined_package] %> 
+</div>   
+<div>
+<h3> Carriers</h3>
+  <%= @shipment[:rates][0]%>
+  <%= @shipment[:rates][0][:service]%>
+  <%= @shipment[:rates][0][:carrier]%>
+  <%= @shipment[:rates][0][:rate]%>
+
+
+
+</div>
+     
+
+</div>
