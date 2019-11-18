@@ -7,7 +7,7 @@
   <%= @shipment[:from_address][:city] %>
   <%= @shipment[:from_address][:zip] %>
   <%= @shipment[:from_address][:city] %>
-
+</div>
 <div>
 <h3> Package Information
   <%= @shipment[:parcel][:id] %>
@@ -19,14 +19,15 @@
 </div>   
 <div>
 <h3> Carriers</h3>
-  <%= @shipment[:rates][0]%>
-  <%= @shipment[:rates][0][:service]%>
-  <%= @shipment[:rates][0][:carrier]%>
-  <%= @shipment[:rates][0][:rate]%>
-
-
-
+  <% carrierParam = @shipment[:rates][0]%>
+  <% if carrierParam.present?%>
+  <% carrierParam %>
+  <%= carrierParam[:carrier] %>
+  <%= carrierParam[:service] %>
+  <%= carrierParam[:rate] %>
+  <% else %>
+    sorry that size is not supported 
+  <% end%>
 </div>
      
-
-</div>
+<!-- service carrier rate -->
