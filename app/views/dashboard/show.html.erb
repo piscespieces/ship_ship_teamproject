@@ -1,0 +1,88 @@
+
+
+<%= form_with(url: "/shipments", method: "post") do %>
+<div class="to-address">
+  <div class="form-group">
+    <%= label_tag(:to_street1, "Street1:") %>
+    <%= text_field_tag(:to_street1) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:to_street2, "Street2:") %>
+    <%= text_field_tag(:to_street2) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:to_city, "City") %>
+    <%= text_field_tag(:city) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:to_state, "State") %>
+    <%= text_field_tag(:to_state) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:to_zip, "Zip") %>
+    <%= text_field_tag(:to_zip) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:to_country, "Country") %>
+    <%= text_field_tag(:to_country) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:to_company, "Company") %>
+    <%= text_field_tag(:to_company) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:to_phone, "Phone") %>
+    <%= text_field_tag(:to_phone) %>
+  </div>
+</div>
+<div class="from-address">
+  <div class="form-group">
+    <%= label_tag(:from_street1, "Street1") %>
+    <%= text_field_tag(:from_street1) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:from_city, "City") %>
+    <%= text_field_tag(:from_city) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:from_state, "State") %>
+    <%= text_field_tag(:from_state) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:from_zip, "Zip") %>
+    <%= text_field_tag(:from_zip) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:from_country, "Country") %>
+    <%= text_field_tag(:from_country) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:from_company, "Company") %>
+    <%= text_field_tag(:from_company) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:from_phone, "Phone") %>
+    <%= text_field_tag(:from_phone) %>
+  </div>
+</div>
+<div classname=shipment>
+  <div class="form-group">
+    <%= label_tag(:length, "Length") %>
+    <%= text_field_tag(:length) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:width, "Width") %>
+    <%= text_field_tag(:width) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:height, "Height") %>
+    <%= text_field_tag(:height) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:weight, "Weight") %>
+    <%= text_field_tag(:weight) %>
+  </div>
+  <%= submit_tag('Submit Form') %>
+</div>
+<% end %>
+
