@@ -58,16 +58,16 @@ main {
   font-size: 3rem;
 }
 
-.logo {
+.logo-container {
   background: blue;
   width: 100vw;
-  height: 100px;
+  height: 80vh;
 }
 
 /* SECTION 1 */
 
 .info-container {
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
   background: #F5F8F8;
 }
