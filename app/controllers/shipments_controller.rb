@@ -1,4 +1,7 @@
 class ShipmentsController < ApplicationController
+  def new
+  end
+
   def create
     parsed_params = get_params
     parcel = EasyPost::Parcel.create(parsed_params[:parcel])
