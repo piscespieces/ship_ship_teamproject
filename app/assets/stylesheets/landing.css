@@ -7,7 +7,7 @@ main {
   display: flex;
 }
 
-.sidebar {
+.landing-sidebar {
   width: 20vw;
   height: 100vh;
   display: grid;
@@ -17,7 +17,7 @@ main {
   right: 0px;
 }
 
-.sidebar-options {
+.landing-sidebar-options {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -27,62 +27,62 @@ main {
   justify-content: space-evenly;
 }
 
-.ship-it {
+.landing-ship-it {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.ship-it a {
+.landing-ship-it a {
   margin: 0;
   font-size: 2rem;
   text-decoration: none;
   font-weight: 800;
 }
 
-.hero-container {
+.landing-hero-container {
   width: 80vw;
   height: 100vh;
   background: #FFF;
 }
 
-.hero-header {
+.landing-hero-header {
   display: grid;
   justify-content: center;
   height: 20vh;
   align-items: center;
 }
 
-.hero-header h1 {
+.landing-hero-header h1 {
   margin: 0;
   font-size: 3rem;
 }
 
-.logo-container {
+.landing-logo-container {
   width: 80vw;
   height: 60vh;
   display: grid;
   grid-template-columns: 20vw 40vw 20vw;
 }
 
-.center-logo {
+.landing-center-logo {
   display: flex;
   align-items: center;
 }
 
-#logo {
+#landing-logo {
   width: 40vw;
   height: 60vh;
   background: papayawhip;
 }
 
-.left-logo-side {
+.landing-left-logo-side {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.p-container {
+.landing-p-container {
   width: 80%;
   height: 20vh;
   display: flex;
@@ -90,11 +90,11 @@ main {
   align-items: center;
 }
 
-.p-container p {
+.landing-p-container p {
   margin: 0;
 }
 
-#hooray {
+#landing-hooray {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,37 +103,37 @@ main {
 
 /* SECTION 1 */
 
-.info-container {
+.landing-info-container {
   width: 80vw;
   height: 80vh;
   background: #F5F8F8;
 }
 
-.info-header {
+.landing-info-header {
   height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.info-header h1 {
+.landing-info-header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.landing-5rem;
 }
 
-.cards-container {
+.landing-cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 80vw;
   height: 65vh;
 }
 
-.card {
+.landing-card {
   width: 100%;
   height: 60vh;
 }
 
-.card-header, .card-footer {
+.landing-card-header, .landing-card-footer {
   width: 70%;
   height: 10vh;
   margin: 0 auto;
@@ -141,16 +141,19 @@ main {
   align-items: center;
 }
 
-.card-header p {
+.landing-card-header p {
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
   text-align: center;
 }
 
-.card-logo {
+.landing-card-logo {
   width: 90%;
   height: 30vh;
   background: papayawhip;
   margin: 2.5vh auto;
 }
+
+/* CONTACT PAGE */
+
