@@ -1,8 +1,6 @@
-EasyPost.api_key = ENV['EASY_POST_API_KEY']
-
-class ShipmentsController < ApplicationController 
-  def create 
-    parsed_params =  get_params
+class ShipmentsController < ApplicationController
+  def create
+    parsed_params = get_params
     parcel = EasyPost::Parcel.create(parsed_params[:parcel])
     to_address = EasyPost::Address.create(parsed_params[:to])
     from_address = EasyPost::Address.create(parsed_params[:from])
