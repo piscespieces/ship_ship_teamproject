@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'landing/show', to: 'landing#show'
   # get 'hello_world', to: 'hello_world#index'
 root "dashboard#show"
 resources :shipments, only: [:create, :show]

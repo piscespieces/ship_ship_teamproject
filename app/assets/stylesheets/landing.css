@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+}
+
+.landing-sidebar {
+  width: 20vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  background: #E0E5FA;
+  position: fixed;
+  right: 0px;
+}
+
+.landing-sidebar-options {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.landing-ship-it {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-ship-it a {
+  margin: 0;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.landing-hero-container {
+  width: 80vw;
+  height: 100vh;
+  background: #FFF;
+}
+
+.landing-hero-header {
+  display: grid;
+  justify-content: center;
+  height: 20vh;
+  align-items: center;
+}
+
+.landing-hero-header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.landing-logo-container {
+  width: 80vw;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 20vw 40vw 20vw;
+}
+
+.landing-center-logo {
+  display: flex;
+  align-items: center;
+}
+
+#landing-logo {
+  width: 40vw;
+  height: 60vh;
+  background: papayawhip;
+}
+
+.landing-left-logo-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-p-container {
+  width: 80%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-p-container p {
+  margin: 0;
+}
+
+#landing-hooray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* SECTION 1 */
+
+.landing-info-container {
+  width: 80vw;
+  height: 80vh;
+  background: #F5F8F8;
+}
+
+.landing-info-header {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-info-header h1 {
+  margin: 0;
+  font-size: 2.landing-5rem;
+}
+
+.landing-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80vw;
+  height: 65vh;
+}
+
+.landing-card {
+  width: 100%;
+  height: 60vh;
+}
+
+.landing-card-header, .landing-card-footer {
+  width: 70%;
+  height: 10vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.landing-card-header p {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.landing-card-logo {
+  width: 90%;
+  height: 30vh;
+  background: papayawhip;
+  margin: 2.5vh auto;
+}
+
+/* CONTACT PAGE */
+
