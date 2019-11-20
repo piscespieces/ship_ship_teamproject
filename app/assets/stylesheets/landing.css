@@ -101,7 +101,7 @@ main {
   padding: 2rem;
 }
 
-/* SECTION 1 */
+/* INFO SECTION ABOUT US */
 
 .landing-info-container {
   width: 80vw;
@@ -157,3 +157,10 @@ main {
 
 /* CONTACT PAGE */
 
+.landing-contact-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 80vw;
+  height: 100vh;
+  background: #FFF;
+}
