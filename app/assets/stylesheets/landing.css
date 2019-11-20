@@ -172,3 +172,10 @@ main {
   align-items: center;
   font-size: 2rem;
 }
+
+.landing-team-pics-container {
+  width: 80vw;
+  height: 35vh;
+  display: grid;
+  grid-template-columns: 20vw 60vw;
+}
