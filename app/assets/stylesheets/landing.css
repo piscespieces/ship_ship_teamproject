@@ -164,3 +164,11 @@ main {
   height: 100vh;
   background: #FFF;
 }
+
+.landing-contact-header {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
