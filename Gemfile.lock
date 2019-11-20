@@ -254,7 +254,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
-  dotenv
   dotenv-rails
   easypost
   jbuilder (~> 2.7)

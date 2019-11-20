@@ -1,7 +1,10 @@
+<Nav class="dashboard-nav">
+  <a class="dashboard-nav-link"><%= link_to "Home", landing_show_path %></a>
+</nav>
 <%= form_with(url: "/shipments", method: "post") do %>
-<div class=form-group-container>
-  <div class="to-address">
-  <h2>To Address </h2>
+<div class=dashboard-form-group-container>
+  <div class="dashboard-to-address">
+  <h1>To: </h1>
     <div>
       <%= label_tag(:to_street1, "Street1:") %>
       <%= text_field_tag(:to_street1) %>
@@ -36,8 +39,8 @@
     </div>
   </div>
 
-  <div class="from-address">
-    <h2>From Address </h2>
+  <div class="dashboard-from-address">
+    <h1>From: </h1>
     <div class="form-group">
       <%= label_tag(:from_street1, "Street1") %>
       <%= text_field_tag(:from_street1) %>
