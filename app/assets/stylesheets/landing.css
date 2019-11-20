@@ -179,3 +179,9 @@ main {
   display: grid;
   grid-template-columns: 20vw 60vw;
 }
+
+.landing-address {
+  text-align: start;
+  padding-left: 4.1vw;
+  line-height: 5vh;
+}
