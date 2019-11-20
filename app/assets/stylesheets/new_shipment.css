@@ -1,9 +1,18 @@
-#container {
-  width: 600px;
-  height: 400px;
+#new-shipment-cube {
+  width: 500px;
+  height: 500px;
   margin: 10px auto;
   padding: 0px;
 }
+
+.new-shipment-page{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: repeat(1, 1fr)
+}
+
 #dimensionsNotRound{
-  color:red;
+  display: grid;
+  grid-column-start: 2;
+  justify-content: center;
 }
