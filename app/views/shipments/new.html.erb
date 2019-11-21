@@ -1,196 +1,82 @@
-<a href="/landing/show">Home</a>  
-<a href="/">Dashboard</a>
-<h1 class="new-shipment-header">BUILD</h1>
-<div class="new-shipment-page">
-  <div id="new-shipment-cube">
-  </div>
-  
-  <div
-    class="inputRow clear"
-    id="dimensionsNotRound"
-    data-role="tooltip"
-  >
-
-    <label class="grid-8"></label>
-    <br/>
-    <br/>
+<nav class="dashboard-nav">
+  <a class="dashboard-nav-link"><%= link_to "Home", root_path %></a>
+</nav>
+<%= form_with(url: "/shipments", method: "post") do %>
+<div class="dashboard-form-group-container">
+  <div class="dashboard-to-address">
+  <h1>To: </h1>
     <div>
-      <span>Length</span>
-      <input
-        id="inp-length"
-        type="range"
-        min="25"
-        max="250"
-        value="0"
-      />
-      <input
-        id="numberL"
-        min="25"
-        max="250"
-        type="number"
-        value="0"
-      />
-      <br/>
-      <br/>
+      <%= label_tag(:to_street1, "Street1:") %>
+      <%= text_field_tag(:to_street1) %>
     </div>
-    <div class="new-shipment-input">
-      <span>Width</span>
-      <input
-        id="inp-width"
-        type="range"
-        min="25"
-        max="250"
-        value="0"
-      />
-      <input
-        id="numberW"
-        min="25"
-        max="250"
-        type="number"
-        value="0"
-      />
-      <br/>
-      <br/>
+    <div>
+      <%= label_tag(:to_street2, "Street2:") %>
+      <%= text_field_tag(:to_street2) %>
     </div>
-    <div class="new-shipment-input">
-      <span>Height</span>
-      <input
-        id="inp-height"
-        type="range"
-        min="25"
-        max="250"
-        value="0"
-      />
-      <input
-        id="numberH"
-        min="25"
-        max="250"
-        type="number"
-        value="0"
-      />
-      <br/>
-      <br/>
+    <div>
+      <%= label_tag(:to_city, "City") %>
+      <%= text_field_tag(:city) %>
     </div>
-    <div class="new-shipment-input">
-      <span>Weight</span>
-      <input
-        id="weightO"
-        min="0"
-        max="250"
-        type="number"
-        value="0"
-      />
-      
-    
+    <div>
+      <%= label_tag(:to_state, "State") %>
+      <%= text_field_tag(:to_state) %>
     </div>
-    <a href="/"><%= image_tag("next.png") %>
+    <div>
+      <%= label_tag(:to_zip, "Zip") %>
+      <%= text_field_tag(:to_zip) %>
+    </div>
+    <div>
+      <%= label_tag(:to_country, "Country") %>
+      <%= text_field_tag(:to_country) %>
+    </div>
+    <div>
+      <%= label_tag(:to_company, "Company") %>
+      <%= text_field_tag(:to_company) %>
+    </div>
+    <div>
+      <%= label_tag(:to_phone, "Phone") %>
+      <%= text_field_tag(:to_phone) %>
+    </div>
+  </div>
+
+  <div class="dashboard-from-address">
+    <h1>From: </h1>
+    <div class="form-group">
+      <%= label_tag(:from_street1, "Street1") %>
+      <%= text_field_tag(:from_street1) %>
+    </div>
+    <div class="form-group">
+      <%= label_tag(:from_city, "City") %>
+      <%= text_field_tag(:from_city) %>
+    </div>
+    <div class="form-group">
+      <%= label_tag(:from_state, "State") %>
+      <%= text_field_tag(:from_state) %>
+    </div>
+    <div class="form-group">
+      <%= label_tag(:from_zip, "Zip") %>
+      <%= text_field_tag(:from_zip) %>
+    </div>
+    <div class="form-group">
+      <%= label_tag(:from_country, "Country") %>
+      <%= text_field_tag(:from_country) %>
+    </div>
+    <div class="form-group">
+      <%= label_tag(:from_company, "Company") %>
+      <%= text_field_tag(:from_company) %>
+    </div>
+    <div class="form-group">
+      <%= label_tag(:from_phone, "Phone") %>
+      <%= text_field_tag(:from_phone) %>
     </div>
   </div>
 </div>
 
-<script src="http://www.html5canvastutorials.com/libraries/three.min.js"></script>
-<script async defer>
+  <%= hidden_field_tag(:length, params[:length]) %>
+  <%= hidden_field_tag(:width, params[:width]) %>
+  <%= hidden_field_tag(:height, params[:height]) %>
+  <%= hidden_field_tag(:weight, params[:weight]) %>
 
-// revolutions per second
-    let angularSpeed = 0.03;
-    let lastTime = 0;
-    let cube = null;
+  <%= submit_tag('Submit Form') %>
 
-    // this function is executed on each animation frame
-    function animate() {
-        // update
-        let time = (new Date()).getTime();
-        let timeDiff = time - lastTime;
-        let angleChange = angularSpeed * timeDiff * 2 * Math.PI / 1000;
-        cube.rotation.y += angleChange;
-        lastTime = time;
-
-        // render
-        renderer.render(scene, camera);
-
-        // request new frame
-        requestAnimationFrame(function () {
-            animate();
-        });
-    }
-
-    // renderer
-    let container = document.getElementById("new-shipment-cube");
-    let renderer = new THREE.WebGLRenderer();
-    renderer.setSize(container.offsetWidth, container.offsetHeight);
-    container.appendChild(renderer.domElement);
-
-    // camera
-    let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-    camera.position.z = 700;
-
-    // scene
-    let scene = new THREE.Scene();
-
-    // cube
-    cube = new THREE.Mesh(new THREE.CubeGeometry(1, 1, 1), 
-    new THREE.MeshLambertMaterial({
-        color: '#deb887'
-    })
-    );
-    cube.overdraw = true;
-    cube.rotation.x = Math.PI * 0.1;
-    cube.rotation.y = Math.PI * 0.3;
-    scene.add(cube);
-
-    // add subtle ambient lighting
-    let ambientLight = new THREE.AmbientLight(0x444444);
-    scene.add(ambientLight);
-
-    // directional lighting
-    let directionalLight = new THREE.DirectionalLight(0x888888);
-    directionalLight.position.set(1, 1, 1).normalize();
-    scene.add(directionalLight);
-
-    // start animation
-    animate();
-
-let $ = function(id) { return document.getElementById(id); };
-
-    oninput= function() {
-    let width = parseInt($('inp-width').value),
-        height = parseInt($('inp-height').value),
-        length = parseInt($('inp-length').value);
-
-    cube.scale.x = width;
-    cube.scale.y = height;
-    cube.scale.z = length;
-    
-};
-
-const rangeH = document.getElementById("inp-height")
-const fieldH = document.getElementById("numberH")
-rangeH.addEventListener('input', function (e) {
-  fieldH.value = e.target.value
-})
-fieldH.addEventListener('input', function (e) {
-  rangeH.value = e.target.value
-})
-
-const rangeL = document.getElementById("inp-length")
-const fieldL = document.getElementById("numberL")
-rangeL.addEventListener('input', function (e) {
-  fieldL.value = e.target.value
-})
-fieldL.addEventListener('input', function (e) {
-  rangeL.value = e.target.value
-})
-
-const rangeW = document.getElementById("inp-width")
-const fieldW = document.getElementById("numberW")
-rangeW.addEventListener('input', function (e) {
-  fieldW.value = e.target.value
-})
-fieldW.addEventListener('input', function (e) {
-  rangeW.value = e.target.value
-})
-
-
-let fieldO = document.getElementById("weightO").value
-    
-</script>
+<% end %>
