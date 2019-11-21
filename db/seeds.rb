@@ -8,4 +8,4 @@
 
 eric = User.create(email: "eric@guy.com", password: "password")
 andres = User.create(email: "andres@guy.com", password: "password")
-brenden = User.create(email: "brenden@guy.com", password: "password")
+brendan = User.create(email: "brendan@guy.com", password: "password")
