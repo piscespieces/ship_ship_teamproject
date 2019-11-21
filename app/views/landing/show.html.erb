@@ -23,9 +23,9 @@
   </div>
     <div class="landing-sidebar">
     <ul class="landing-sidebar-options">
-      <li>LOGIN</li>
-      <li>SIGNUP</li>
-      <li>DASHBOARD</li>
+      <li><%= link_to "LOGIN", "/users/sign_in" %></li>
+      <li><%= link_to "SIGNUP", "/users/sign_up" %></li>
+      <li><%= link_to "DASHBOARD", "/shipments/new" %></li>
     </ul>
     <div class="landing-ship-it">
       <h1>SHIP IT!</h1>
@@ -79,6 +79,58 @@
         </p>
       </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT US PAGE -->
+
+<section>
+  <div class="landing-contact-container">
+
+  <!-- CONTACT US HEADER -->
+
+    <div class="landing-team">
+      <div class="landing-contact-header">
+        <h1>Contact Us</h1>
+      </div>
+
+      <div class="landing-team-pics-container">
+
+        <div class="landing-pics-cards">
+          <div card="landing-card-eric">
+            <%= image_tag 'OyanadelEric.jpg', :class => "eric" %>
+            <div class="landing-card-name">
+              <h3>Eric Oyanadel</h3>
+            </div>
+          </div>
+
+          <div class="landing-card-brendan">
+            <%= image_tag 'GeralskyBrendan.jpg', :class => "brendan" %>
+            <div class="landing-card-name">
+              <h3>Brendan Geralsky</h3>
+            </div>
+          </div>
+
+          <div class="landing-card-andres">
+            <%= image_tag 'UrdanetaAndres.jpg', :class => "andres" %>
+            <div class="landing-card-name">
+              <h3>Andres Urdaneta</h3>
+            </div>
+          </div>
+
+          <div class="landing-card-daniel">
+            <%= image_tag 'PerezDaniel.jpg', :class => "daniel" %>
+            <div class="landing-card-name">
+              <h3>Daniel Perez</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="landing-contact-form">
     </div>
   </div>
 </section>

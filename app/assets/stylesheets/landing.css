@@ -101,7 +101,7 @@ main {
   padding: 2rem;
 }
 
-/* SECTION 1 */
+/* INFO SECTION ABOUT US */
 
 .landing-info-container {
   width: 80vw;
@@ -156,4 +156,44 @@ main {
 }
 
 /* CONTACT PAGE */
+
+.landing-contact-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 80vw;
+  height: 100vh;
+  background: #FFF;
+}
+
+.landing-contact-header {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.landing-team-pics-container {
+  width: 80vw;
+  height: 35vh;
+}
+
+.landing-pics-cards {
+  width: 80vw;
+  height: 35vh;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20vw, 1fr))
+}
+
+.eric, .brendan, .andres, .daniel {
+  width: 100%;
+  height: 36vh;
+}
+
+.landing-card-name h3 {
+  margin: 0;
+}
+
+/* CONTACT FORM */
+
 
