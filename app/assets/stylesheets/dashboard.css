@@ -1,5 +1,20 @@
-.form-group-container{
+.dashboard-form-group-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100vh;
 }
 
+.dashboard-nav-header{
+  text-align: center;
+  position: relative;
+  width: 100%; 
+  margin: 0;
+}
+
+.dashboard-to-address {
+  background-color: #E0E5FA; 
+}
+
+.dashboard-from-address input[type="text"]{
+  background-color: #E0E5FA; 
+}

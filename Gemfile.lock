@@ -254,7 +254,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
-  dotenv
   dotenv-rails
   easypost
   jbuilder (~> 2.7)
@@ -278,4 +277,4 @@ RUBY VERSION
    ruby 2.6.5p114
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
