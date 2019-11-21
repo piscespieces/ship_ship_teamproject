@@ -1,6 +1,6 @@
 <a href="/landing/show">Home</a>  
 <a href="/">Dashboard</a>
-<h1>New Shipment!</h1>
+<h1 class="new-shipment-header">BUILD</h1>
 <div class="new-shipment-page">
   <div id="new-shipment-cube">
   </div>
@@ -11,7 +11,7 @@
     data-role="tooltip"
   >
 
-    <label class="grid-8">Dimensions:</label>
+    <label class="grid-8"></label>
     <br/>
     <br/>
     <div>
@@ -20,13 +20,13 @@
         id="inp-length"
         type="range"
         min="25"
-        max="300"
+        max="250"
         value="0"
       />
       <input
         id="numberL"
         min="25"
-        max="300"
+        max="250"
         type="number"
         value="0"
       />
@@ -39,13 +39,13 @@
         id="inp-width"
         type="range"
         min="25"
-        max="300"
+        max="250"
         value="0"
       />
       <input
         id="numberW"
         min="25"
-        max="300"
+        max="250"
         type="number"
         value="0"
       />
@@ -58,13 +58,13 @@
         id="inp-height"
         type="range"
         min="25"
-        max="300"
+        max="250"
         value="0"
       />
       <input
         id="numberH"
         min="25"
-        max="300"
+        max="250"
         type="number"
         value="0"
       />
@@ -74,18 +74,24 @@
     <div class="new-shipment-input">
       <span>Weight</span>
       <input
-        id="weightLbs"
+        id="weightO"
         min="0"
         max="250"
         type="number"
         value="0"
       />
       <button onclick="weightFunction()">Mandatory</button>
+    
     </div>
+    <a href="/"><%= image_tag("next.png") %>
   </div>
 </div>
+
+</div>
+
 <script src="http://www.html5canvastutorials.com/libraries/three.min.js"></script>
 <script async defer>
+
 // revolutions per second
     let angularSpeed = 0.03;
     let lastTime = 0;
@@ -157,36 +163,36 @@ let $ = function(id) { return document.getElementById(id); };
     cube.scale.z = length;
     
 };
-//height
-let rangeH = document.getElementById("inp-height")
-let fieldH = document.getElementById("numberH")
+
+const rangeH = document.getElementById("inp-height")
+const fieldH = document.getElementById("numberH")
 rangeH.addEventListener('input', function (e) {
   fieldH.value = e.target.value
 })
 fieldH.addEventListener('input', function (e) {
   rangeH.value = e.target.value
 })
-//length
-let rangeL = document.getElementById("inp-length")
-let fieldL = document.getElementById("numberL")
+
+const rangeL = document.getElementById("inp-length")
+const fieldL = document.getElementById("numberL")
 rangeL.addEventListener('input', function (e) {
   fieldL.value = e.target.value
 })
 fieldL.addEventListener('input', function (e) {
   rangeL.value = e.target.value
 })
-//Width
-let rangeW = document.getElementById("inp-width")
-let fieldW = document.getElementById("numberW")
+
+const rangeW = document.getElementById("inp-width")
+const fieldW = document.getElementById("numberW")
 rangeW.addEventListener('input', function (e) {
   fieldW.value = e.target.value
 })
 fieldW.addEventListener('input', function (e) {
   rangeW.value = e.target.value
 })
-//
+
 function weightFunction() {
-    let w = document.getElementById("weightLbs").value
-    document.getElementById("weight").innerHTML = w
+    let fieldO = document.getElementById("weightO").value
+    
 }
 </script>
