@@ -63,11 +63,11 @@
     </div>
     <div class="form-group">
       <%= label_tag(:from_company, "Company") %>
-      <%= text_field_tag(:from_company) %>
+      <%= text_field_tag(:from_company, current_user.profile&.name) %>
     </div>
     <div class="form-group">
       <%= label_tag(:from_phone, "Phone") %>
-      <%= text_field_tag(:from_phone) %>
+      <%= text_field_tag(:from_phone, current_user.profile&.phone) %>
     </div>
   </div>
 </div>
