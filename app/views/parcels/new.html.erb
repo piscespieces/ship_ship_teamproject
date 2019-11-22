@@ -21,14 +21,14 @@
       <input
         id="inp-length"
         type="range"
-        min="25"
-        max="250"
+        min="1"
+        max="33"
         value="0"
       />
       <input
         id="numberL"
-        min="25"
-        max="250"
+        min="1"
+        max="33"
         type="number"
         value="0"
       />
@@ -40,14 +40,14 @@
       <input
         id="inp-width"
         type="range"
-        min="25"
-        max="250"
+        min="1"
+        max="33"
         value="0"
       />
       <input
         id="numberW"
-        min="25"
-        max="250"
+        min="1"
+        max="33"
         type="number"
         value="0"
       />
@@ -59,14 +59,14 @@
       <input
         id="inp-height"
         type="range"
-        min="25"
-        max="250"
+        min="1"
+        max="33"
         value="0"
       />
       <input
         id="numberH"
-        min="25"
-        max="250"
+        min="1"
+        max="33"
         type="number"
         value="0"
       />
@@ -78,7 +78,7 @@
       <input
         id="weightO"
         min="0"
-        max="250"
+        max="600"
         type="number"
         value="0"
       />
@@ -144,7 +144,7 @@ function enableCube(){
     let scene = new THREE.Scene();
 
     // cube
-    cube = new THREE.Mesh(new THREE.CubeGeometry(1, 1, 1),
+    cube = new THREE.Mesh(new THREE.CubeGeometry(8, 8, 8),
     new THREE.MeshLambertMaterial({
         color: '#deb887'
     })
