@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "landing#show"
+  get "carriers/show"
   resource :dashboard, only: [:show]
   resources :parcels, only: [:new]
   resources :shipments, only: [:create, :show, :new]
