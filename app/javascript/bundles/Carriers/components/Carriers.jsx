@@ -26,11 +26,17 @@ export default class Carriers extends React.Component {
         return (
             <>
                 <h1>Carriers JSX</h1>
-                <div>
-                    {
-                        console.log(provider)
-                    }
-                </div>
+
+                {
+                    provider.map(carrier => {
+                        return (
+                            <div className="shipments-carrier">
+                                {carrier}
+                            </div>
+                        )
+                    })
+                }
+
                 {/* <h1>Carriers JSX</h1>
                 {this.props.shipment.buyer_address.street1} */}
             </>
