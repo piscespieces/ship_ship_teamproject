@@ -4,16 +4,19 @@
     <title>FinalProjectTemplate</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <script src="http://www.html5canvastutorials.com/libraries/three.min.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
     <%= javascript_pack_tag 'carriers-bundle' %>
+=======
+    <%= javascript_pack_tag 'parcel_pack', 'data-turbolinks-track': 'reload' %>
+>>>>>>> 02cd93a3090d5e33c5023325e6f17e010dfccbb8
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <nav class="navbar-text float-right">
       <% if user_signed_in? %>
         Logged in as: <strong><%= current_user.email %></strong>
