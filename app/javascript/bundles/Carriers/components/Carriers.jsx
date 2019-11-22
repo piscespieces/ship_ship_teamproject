@@ -25,7 +25,14 @@ export default class Carriers extends React.Component {
         const { carriers, provider } = this.state
         return (
             <>
-                <h1>Carriers JSX</h1>
+                <div className="carriers-header">
+                    <div className="carriers-header-logo">
+                        <span>LOGO</span>
+                    </div>
+                    <div className="carriers-header-header">
+                        <h1>SELECT A CARRIER</h1>
+                    </div>
+                </div>
 
                 {
                     provider.map(carrier => {

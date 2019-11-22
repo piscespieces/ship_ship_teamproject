@@ -2,3 +2,18 @@
   background-color:#E0E5FA;
   height: 4rem;
 }
+
+.carriers-header {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.carriers-header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.carriers-header-header {
+
+}
