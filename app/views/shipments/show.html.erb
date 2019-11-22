@@ -4,7 +4,12 @@
   <h1 class=carriers-nav-header> Select Your Carrier!</h1>
 </nav>
 
-<div>
+<%= react_component 'Carriers', props: { shipment: @shipment } %>
+
+
+<%
+=begin%>
+ <div>
   <div>
     <div>
       <h3> Package Information
@@ -26,6 +31,8 @@
       <p>sorry that size is not supported for this carrier service</p>
     <% end%>
   </div>
-</div>
+</div> 
+<%
+=end%>
 
 <!-- service carrier rate -->
