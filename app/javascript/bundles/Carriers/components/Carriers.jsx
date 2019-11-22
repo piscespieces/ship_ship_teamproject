@@ -1,14 +1,23 @@
 import React from 'react'
 
 export default class Carriers extends React.Component {
-    state = {}
+    state = {
+    }
+
+    handleSelectChange = (e) => {
+    }
 
     render() {
-        console.log(this.props.shipment)
         return (
             <>
                 <h1>Carriers JSX</h1>
-                {this.props.shipment.buyer_address.street1}
+                <div>
+                    {
+                        console.log(this.props.shipment.rates.map(d => { return d.carrier }))
+                    }
+                </div>
+                {/* <h1>Carriers JSX</h1>
+                {this.props.shipment.buyer_address.street1} */}
             </>
         )
     }
