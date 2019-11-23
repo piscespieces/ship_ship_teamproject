@@ -34,7 +34,31 @@
   height: 80vh;
 }
 
-.carriers-table-head {
+.carriers-table {
   width: 100vw;
+  height: 80vh;
   background: papayawhip;
+}
+
+.carriers-table-carrier {
+  text-align: center;
+}
+
+.carriers-table-select-cell {
+  text-align: center;
+}
+
+.carriers-table-rates {
+  text-align: center;
+}
+
+.carriers-table-rates ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carriers-section-footer {
+  width: 100vw;
+  height: 20vh;
 }

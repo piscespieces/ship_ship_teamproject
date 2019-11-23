@@ -62,6 +62,9 @@ export default class Carriers extends React.Component {
                         selectedService={selectedService}
                     />
                 </main>
+                <section className="carriers-section-footer">
+
+                </section>
 
                 {/* <h1>Carriers JSX</h1>
                 {this.props.shipment.buyer_address.street1} */}

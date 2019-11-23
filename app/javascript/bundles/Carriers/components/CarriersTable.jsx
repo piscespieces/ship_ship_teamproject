@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CarriersTable = props => (
-   <table className="carriers-table-head">
+   <table className="carriers-table">
       <thead>
          <tr>
             <th className="">Carrier</th>
@@ -16,10 +16,10 @@ const CarriersTable = props => (
             props.carrierName.map(carrier => {
                return (
                   <tr className="">
-                     <td className="">
+                     <td className="carriers-table-carrier">
                         {carrier}
                      </td>
-                     <td>
+                     <td className="carriers-table-select-cell">
                         <select onChange={props.handleOptionChange}>
                            {
                               props.customCarrierRates.map(customCarrier => {
@@ -36,7 +36,7 @@ const CarriersTable = props => (
                            }
                         </select>
                      </td>
-                     <td>
+                     <td className="carriers-table-rates">
                         {
                            props.customCarrierRates.map(customCarrier => {
                               if (customCarrier.carrier === carrier && props.selectedService.toString() === customCarrier.service) {
