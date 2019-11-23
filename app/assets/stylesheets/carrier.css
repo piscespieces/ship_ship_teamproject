@@ -16,7 +16,8 @@
 }
 
 .carriers-header-header {
-
+    display: flex;
+    align-items: center;
 }
 
 .carriers-tablehead {
