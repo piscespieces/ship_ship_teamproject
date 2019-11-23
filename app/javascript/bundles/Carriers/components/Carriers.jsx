@@ -52,18 +52,18 @@ export default class Carriers extends React.Component {
                 </div>
 
                 <main className="carriers-main">
-
+                    {
+                        provider.map(carrier => {
+                            return (
+                                <div className="carriers-shipments-carrier-wrapper">
+                                    <div className="carriers-shipments-carrier">
+                                        {carrier}
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                 </main>
-
-                {
-                    provider.map(carrier => {
-                        return (
-                            <div className="shipments-carrier">
-                                {carrier}
-                            </div>
-                        )
-                    })
-                }
 
                 {/* <h1>Carriers JSX</h1>
                 {this.props.shipment.buyer_address.street1} */}
