@@ -1,8 +1,9 @@
 import React from 'react'
+import CarriersTable from './CarriersTable'
 
 export default class Carriers extends React.Component {
     state = {
-        carriers: this.props.shipment.rates,
+        carrierRates: this.props.shipment.rates,
         provider: [],
         services: []
     }
@@ -12,19 +13,15 @@ export default class Carriers extends React.Component {
     }
 
     getCarriers = () => {
-        const uniqCarriers = this.state.carriers.map(c => { return c.carrier })
+        const uniqCarriers = this.state.carrierRates.map(c => { return c.carrier })
         const filterCarriers = uniqCarriers.filter(function (car, index) {
             return uniqCarriers.indexOf(car) === index
         })
         this.setState({ provider: filterCarriers })
     }
 
-    handleSelectChange = (e) => {
-    }
-
     render() {
-        console.log(this.state.provider)
-        const { carriers, provider } = this.state
+        const { carrierRates, provider } = this.state
         return (
             <>
                 <div className="carriers-header">
@@ -36,40 +33,11 @@ export default class Carriers extends React.Component {
                     </div>
                 </div>
 
-
-
-                <div className="carriers-tablehead">
-                    <div className="carriers-tablehead-content">
-                        PLACEHOLDER
-                    </div>
-                    <div className="carriers-tablehead-content">
-                        PLACEHOLDER
-                    </div>
-                    <div className="carriers-tablehead-content">
-                        PLACEHOLDER
-                    </div>
-                    <div className="carriers-tablehead-content">
-                        PLACEHOLDER
-                    </div>
-                </div>
-
                 <main className="carriers-main">
-                    {
-                        provider.map(carrier => {
-                            return (
-                                <div className="carriers-shipments-carrier-wrapper">
-                                    <div className="carriers-shipments-carrier">
-                                        {carrier}
-                                    </div>
-                                    <div className="carriers-shipments-services">
-                                        {
-                                            //GET THE SERVICES OF EACH CARRIER THAT IM GETTING BACK
-                                        }
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
+                    <CarriersTable
+                        carrierProvider={provider}
+                        carrierRates={carrierRates}
+                    />
                 </main>
 
                 {/* <h1>Carriers JSX</h1>

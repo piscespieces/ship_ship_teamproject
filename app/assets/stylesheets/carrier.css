@@ -32,18 +32,9 @@
 .carriers-main {
   width: 100vw;
   height: 80vh;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
 }
 
-.carriers-shipments-carrier-wrapper {
-  display: flex;
-  align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.carriers-shipments-carrier {
-  display: flex;
-  justify-content: center;
+.carriers-table-head {
+  width: 100vw;
+  background: papayawhip;
 }
