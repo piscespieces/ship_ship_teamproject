@@ -8,7 +8,7 @@ document.addEventListener("turbolinks:load", function(){
       const width = parseInt(document.getElementById('inp-width').value)
       const height = parseInt(document.getElementById('inp-height').value)
       const length = parseInt(document.getElementById('inp-length').value)
-      const weight = parseInt(document.getElementById("weightO").value)
+      const weight = parseInt(document.getElementById("inp-weight").value)
       window.location.href = `/shipments/new?width=${width}&height=${height}&length=${length}&weight=${weight}`
     })
   }
@@ -54,13 +54,13 @@ function enableCube(){
 
     // camera
     let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-    camera.position.z = 700;
+    camera.position.z = 300;
 
     // scene
     let scene = new THREE.Scene();
 
     // cube
-    cube = new THREE.Mesh(new THREE.CubeGeometry(8, 8, 8),
+    cube = new THREE.Mesh(new THREE.CubeGeometry(3, 3, 3),
     new THREE.MeshLambertMaterial({
         color: '#deb887'
     })
@@ -87,40 +87,46 @@ function enableCube(){
     let height = parseInt(document.getElementById('inp-height').value)
     let length = parseInt(document.getElementById('inp-length').value)
 
-    cube.scale.x = width;
+    cube.scale.x = length;
     cube.scale.y = height;
-    cube.scale.z = length;
+    cube.scale.z = width;
 
 };
 
 const rangeH = document.getElementById("inp-height")
 const fieldH = document.getElementById("numberH")
-rangeH.addEventListener('input', function (e) {
-  fieldH.value = e.target.value
-})
-fieldH.addEventListener('input', function (e) {
-  rangeH.value = e.target.value
-})
+  rangeH.addEventListener('input', function (e) {
+    fieldH.value = e.target.value
+  })
+  fieldH.addEventListener('input', function (e) {
+    rangeH.value = e.target.value
+  })
 
 const rangeL = document.getElementById("inp-length")
 const fieldL = document.getElementById("numberL")
-rangeL.addEventListener('input', function (e) {
-  fieldL.value = e.target.value
-})
-fieldL.addEventListener('input', function (e) {
-  rangeL.value = e.target.value
-})
+  rangeL.addEventListener('input', function (e) {
+    fieldL.value = e.target.value
+  })
+  fieldL.addEventListener('input', function (e) {
+    rangeL.value = e.target.value
+  })
 
 const rangeW = document.getElementById("inp-width")
 const fieldW = document.getElementById("numberW")
-rangeW.addEventListener('input', function (e) {
-  fieldW.value = e.target.value
-})
-fieldW.addEventListener('input', function (e) {
-  rangeW.value = e.target.value
-})
+  rangeW.addEventListener('input', function (e) {
+    fieldW.value = e.target.value
+  })
+  fieldW.addEventListener('input', function (e) {
+    rangeW.value = e.target.value
+  })
 
-
-let fieldO = document.getElementById("weightO").value
-    }
+let rangeO = document.getElementById("inp-weight")
+let fieldO = document.getElementById("numberWeight")
+  rangeO.addEventListener('input', function (e) {
+    fieldO.value = e.target.value
+  })
+  fieldO.addEventListener('input', function (e) {
+    rangeO.value = e.target.value
+  })
+ }
 }
