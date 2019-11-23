@@ -34,6 +34,27 @@ export default class Carriers extends React.Component {
                     </div>
                 </div>
 
+
+
+                <div className="carriers-tablehead">
+                    <div className="carriers-tablehead-content">
+                        PLACEHOLDER
+                    </div>
+                    <div className="carriers-tablehead-content">
+                        PLACEHOLDER
+                    </div>
+                    <div className="carriers-tablehead-content">
+                        PLACEHOLDER
+                    </div>
+                    <div className="carriers-tablehead-content">
+                        PLACEHOLDER
+                    </div>
+                </div>
+
+                <main className="carriers-main">
+
+                </main>
+
                 {
                     provider.map(carrier => {
                         return (

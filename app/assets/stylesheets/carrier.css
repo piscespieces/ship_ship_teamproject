@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-around;
   width: 100vw;
+  height: 20vh;
 }
 
 .carriers-header-logo {
@@ -16,4 +17,20 @@
 
 .carriers-header-header {
 
+}
+
+.carriers-tablehead {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: papayawhip;
+}
+
+.carriers-main {
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
