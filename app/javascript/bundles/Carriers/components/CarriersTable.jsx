@@ -13,13 +13,41 @@ const CarriersTable = props => (
       <tbody>
 
          {
-            props.carrierProvider.map(carrier => {
+            props.carrierName.map(carrier => {
                return (
                   <tr className="">
                      <td className="">
                         {carrier}
                      </td>
                      <td>
+                        <select>
+                           {
+                              props.customCarrierRates.map(customCarrier => {
+                                 if (customCarrier.carrier === carrier) {
+                                    return (
+                                       <option value={customCarrier.service}>
+                                          {customCarrier.service}
+                                       </option>
+                                    )
+                                 }
+                              })
+                           }
+                        </select>
+                     </td>
+                     <td>
+                        {
+                           props.customCarrierRates.map(customCarrier => {
+                              if (customCarrier.carrier === carrier) {
+                                 return (
+                                    <ul>
+                                       <li>
+                                          {customCarrier.rate}
+                                       </li>
+                                    </ul>
+                                 )
+                              }
+                           })
+                        }
                      </td>
                   </tr>
                )

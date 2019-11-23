@@ -5,7 +5,7 @@ export default class Carriers extends React.Component {
     state = {
         carrierRates: this.props.shipment.rates,
         customCarrierRates: [],
-        provider: [],
+        carrierName: [],
         services: []
     }
 
@@ -19,7 +19,7 @@ export default class Carriers extends React.Component {
         const filterCarriers = uniqCarriers.filter(function (car, index) {
             return uniqCarriers.indexOf(car) === index
         })
-        this.setState({ provider: filterCarriers })
+        this.setState({ carrierName: filterCarriers })
     }
 
     customCarrierRates = () => {
@@ -36,7 +36,7 @@ export default class Carriers extends React.Component {
 
     render() {
         console.log(this.state.customCarrierRates)
-        const { carrierRates, provider } = this.state
+        const { carrierRates, carrierName, customCarrierRates } = this.state
         return (
             <>
                 <div className="carriers-header">
@@ -50,8 +50,9 @@ export default class Carriers extends React.Component {
 
                 <main className="carriers-main">
                     <CarriersTable
-                        carrierProvider={provider}
+                        carrierName={carrierName}
                         carrierRates={carrierRates}
+                        customCarrierRates={customCarrierRates}
                     />
                 </main>
 
