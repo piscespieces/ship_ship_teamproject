@@ -4,12 +4,14 @@ import CarriersTable from './CarriersTable'
 export default class Carriers extends React.Component {
     state = {
         carrierRates: this.props.shipment.rates,
+        customCarrierRates: [],
         provider: [],
         services: []
     }
 
     componentDidMount() {
         this.getCarriers()
+        this.customCarrierRates()
     }
 
     getCarriers = () => {
@@ -20,7 +22,20 @@ export default class Carriers extends React.Component {
         this.setState({ provider: filterCarriers })
     }
 
+    customCarrierRates = () => {
+        const carrierRates = this.state.carrierRates
+        const mapCustomCarrierRates = carrierRates.map(carrier => {
+            return ({
+                carrier: carrier.carrier,
+                service: carrier.service,
+                rate: carrier.rate
+            })
+        })
+        this.setState({ customCarrierRates: mapCustomCarrierRates })
+    }
+
     render() {
+        console.log(this.state.customCarrierRates)
         const { carrierRates, provider } = this.state
         return (
             <>

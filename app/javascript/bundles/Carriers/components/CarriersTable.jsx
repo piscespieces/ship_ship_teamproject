@@ -20,19 +20,6 @@ const CarriersTable = props => (
                         {carrier}
                      </td>
                      <td>
-                        <select>
-                           {
-                              props.carrierRates.map(data => {
-                                 if (data.carrier === carrier) {
-                                    return (
-                                       <option value={data.service}>
-                                          {data.service}
-                                       </option>
-                                    )
-                                 }
-                              })
-                           }
-                        </select>
                      </td>
                   </tr>
                )
