@@ -3,7 +3,8 @@ import React from 'react'
 export default class Carriers extends React.Component {
     state = {
         carriers: this.props.shipment.rates,
-        provider: []
+        provider: [],
+        services: []
     }
 
     componentDidMount() {
@@ -22,6 +23,7 @@ export default class Carriers extends React.Component {
     }
 
     render() {
+        console.log(this.state.provider)
         const { carriers, provider } = this.state
         return (
             <>
@@ -58,6 +60,11 @@ export default class Carriers extends React.Component {
                                 <div className="carriers-shipments-carrier-wrapper">
                                     <div className="carriers-shipments-carrier">
                                         {carrier}
+                                    </div>
+                                    <div className="carriers-shipments-services">
+                                        {
+                                            //GET THE SERVICES OF EACH CARRIER THAT IM GETTING BACK
+                                        }
                                     </div>
                                 </div>
                             )
