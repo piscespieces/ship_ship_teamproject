@@ -6,7 +6,7 @@ const CarriersTable = props => (
          <tr>
             <th className="">Carrier</th>
             <th className="">Service</th>
-            <th className="">Placeholder</th>
+            <th className="">Rate</th>
             <th className="">Placeholder</th>
          </tr>
       </thead>
@@ -20,12 +20,14 @@ const CarriersTable = props => (
                         {carrier}
                      </td>
                      <td>
-                        <select>
+                        <select onChange={props.handleOptionChange}>
                            {
                               props.customCarrierRates.map(customCarrier => {
                                  if (customCarrier.carrier === carrier) {
                                     return (
-                                       <option value={customCarrier.service}>
+                                       <option
+                                          value={customCarrier.service}
+                                       >
                                           {customCarrier.service}
                                        </option>
                                     )
@@ -37,11 +39,13 @@ const CarriersTable = props => (
                      <td>
                         {
                            props.customCarrierRates.map(customCarrier => {
-                              if (customCarrier.carrier === carrier) {
+                              if (customCarrier.carrier === carrier && props.selectedService.toString() === customCarrier.service) {
                                  return (
                                     <ul>
                                        <li>
-                                          {customCarrier.rate}
+                                          {
+                                             customCarrier.rate
+                                          }
                                        </li>
                                     </ul>
                                  )

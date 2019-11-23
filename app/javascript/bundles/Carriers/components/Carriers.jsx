@@ -6,7 +6,8 @@ export default class Carriers extends React.Component {
         carrierRates: this.props.shipment.rates,
         customCarrierRates: [],
         carrierName: [],
-        services: []
+        services: [],
+        selectedService: []
     }
 
     componentDidMount() {
@@ -34,9 +35,13 @@ export default class Carriers extends React.Component {
         this.setState({ customCarrierRates: mapCustomCarrierRates })
     }
 
+    handleOptionChange = e => {
+        const option = e.target.value
+        this.setState({ selectedService: [option] })
+    }
+
     render() {
-        console.log(this.state.customCarrierRates)
-        const { carrierRates, carrierName, customCarrierRates } = this.state
+        const { carrierRates, carrierName, customCarrierRates, selectedService } = this.state
         return (
             <>
                 <div className="carriers-header">
@@ -53,6 +58,8 @@ export default class Carriers extends React.Component {
                         carrierName={carrierName}
                         carrierRates={carrierRates}
                         customCarrierRates={customCarrierRates}
+                        handleOptionChange={this.handleOptionChange}
+                        selectedService={selectedService}
                     />
                 </main>
 
