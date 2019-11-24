@@ -44,11 +44,19 @@
     <div class="shipment-from-wrap">
     <div>
       <%= label_tag(:from_street1, "Street1") %>
+<<<<<<< HEAD
       <%= text_field_tag(:from_street1 ) %>
     </div>
     <div>
       <%= label_tag(:from_street2, "Street2") %>
       <%= text_field_tag(:from_street2) %>
+=======
+      <%= text_field_tag(:from_street1) %>
+    </div>
+    <div>
+      <%= label_tag(:from_street1, "Street2") %>
+      <%= text_field_tag(:from_street1) %>
+>>>>>>> shipment css update
     </div>
     <div>
       <%= label_tag(:from_city, "City") %>
@@ -78,7 +86,11 @@
         <%= text_field_tag(:from_phone, current_user.profile&.phone) %>
       <% end%>
     </div>
+<<<<<<< HEAD
     <%= submit_tag('Submit!') %>
+=======
+      <%= submit_tag('Submit!') %>
+>>>>>>> shipment css update
   </div>
 </div>
 
