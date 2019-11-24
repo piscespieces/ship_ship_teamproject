@@ -16,7 +16,7 @@ const CarriersTable = ({ carrierRatesV2, selectedServicesV2, handleOptionChange 
             const currentService = selectedServicesV2[carrier];
             return (
                <tr>
-                  <td className="carrier-table-carrier">
+                  <td className="carriers-table-carrier">
                      {carrier}
                   </td>
                   <td className="carriers-table-select-cell">
@@ -28,7 +28,7 @@ const CarriersTable = ({ carrierRatesV2, selectedServicesV2, handleOptionChange 
                         ))}
                      </select>
                   </td>
-                  <td className="carrier-table-rates">
+                  <td className="carriers-table-rates">
                      {currentCarrier.rateByService[currentService || currentCarrier.serviceTypes[0]]}
                   </td>
                </tr>
