@@ -22,7 +22,7 @@ const CarriersTable = props => (
                      <td className="carriers-table-select-cell">
                         <select onChange={props.handleOptionChange}>
                            {
-                              props.customCarrierRates.map(customCarrier => {
+                              props.getCarrierRates.map(customCarrier => {
                                  if (customCarrier.carrier === carrier) {
                                     return (
                                        <option
@@ -38,7 +38,7 @@ const CarriersTable = props => (
                      </td>
                      <td className="carriers-table-rates">
                         {
-                           props.customCarrierRates.map(customCarrier => {
+                           props.getCarrierRates.map(customCarrier => {
                               if (customCarrier.carrier === carrier && props.selectedService.toString() === customCarrier.service) {
                                  return (
                                     <ul>

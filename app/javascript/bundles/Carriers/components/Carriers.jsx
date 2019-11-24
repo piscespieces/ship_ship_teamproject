@@ -4,7 +4,7 @@ import CarriersTable from './CarriersTable'
 export default class Carriers extends React.Component {
     state = {
         carrierRates: this.props.shipment.rates,
-        customCarrierRates: [],
+        getCarrierRates: [],
         carrierName: [],
         services: [],
         selectedService: []
@@ -12,7 +12,7 @@ export default class Carriers extends React.Component {
 
     componentDidMount() {
         this.getCarriers()
-        this.customCarrierRates()
+        this.getCarrierRates()
     }
 
     getCarriers = () => {
@@ -23,7 +23,7 @@ export default class Carriers extends React.Component {
         this.setState({ carrierName: filterCarriers })
     }
 
-    customCarrierRates = () => {
+    getCarrierRates = () => {
         const carrierRates = this.state.carrierRates
         const mapCustomCarrierRates = carrierRates.map(carrier => {
             return ({
@@ -32,7 +32,7 @@ export default class Carriers extends React.Component {
                 rate: carrier.rate
             })
         })
-        this.setState({ customCarrierRates: mapCustomCarrierRates })
+        this.setState({ getCarrierRates: mapCustomCarrierRates })
     }
 
     handleOptionChange = e => {
@@ -41,7 +41,7 @@ export default class Carriers extends React.Component {
     }
 
     render() {
-        const { carrierRates, carrierName, customCarrierRates, selectedService } = this.state
+        const { carrierRates, carrierName, getCarrierRates, selectedService } = this.state
         return (
             <>
                 <div className="carriers-header">
@@ -57,7 +57,7 @@ export default class Carriers extends React.Component {
                     <CarriersTable
                         carrierName={carrierName}
                         carrierRates={carrierRates}
-                        customCarrierRates={customCarrierRates}
+                        getCarrierRates={getCarrierRates}
                         handleOptionChange={this.handleOptionChange}
                         selectedService={selectedService}
                     />
