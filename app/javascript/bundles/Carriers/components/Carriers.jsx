@@ -30,9 +30,6 @@ export default class Carriers extends React.Component {
         return (
             <>
                 <div className="carriers-header">
-                    <div className="carriers-header-logo">
-                        <span>LOGO</span>
-                    </div>
                     <div className="carriers-header-header">
                         <h1>SELECT A CARRIER</h1>
                     </div>

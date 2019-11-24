@@ -2,12 +2,12 @@ import React from 'react'
 
 const CarriersTable = ({ carrierRatesV2, selectedServicesV2, handleOptionChange }) => (
    <table className="carriers-table">
-      <thead>
-         <tr>
-            <th className="">Carrier</th>
-            <th className="">Service</th>
-            <th className="">Rate</th>
-            <th className="">Placeholder</th>
+      <thead className="carriers-tablehead">
+         <tr className="carriers-tablehead-tr">
+            <th className="carriers-tablehead-th">Carrier</th>
+            <th className="carriers-tablehead-th">Service</th>
+            <th className="carriers-tablehead-th">Rate</th>
+            <th className="carriers-tablehead-th">Placeholder</th>
          </tr>
       </thead>
       <tbody>
