@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CarriersTable = props => (
+const CarriersTable = ({ carrierRatesV2, selectedServicesV2, handleOptionChange }) => (
    <table className="carriers-table">
       <thead>
          <tr>
@@ -11,55 +11,30 @@ const CarriersTable = props => (
          </tr>
       </thead>
       <tbody>
-
-         {
-            props.carrierName.map(carrier => {
-               return (
-                  <tr className="">
-                     <td className="carriers-table-carrier">
-                        {carrier}
-                     </td>
-                     <td className="carriers-table-select-cell">
-                        <select onChange={props.handleOptionChange}>
-                           {
-                              props.getCarrierRates.map(customCarrier => {
-                                 if (customCarrier.carrier === carrier) {
-                                    return (
-                                       <option
-                                          value={customCarrier.service}
-                                       >
-                                          {customCarrier.service}
-                                       </option>
-                                    )
-                                 }
-                              })
-                           }
-                        </select>
-                     </td>
-                     <td className="carriers-table-rates">
-                        {
-                           props.getCarrierRates.map(customCarrier => {
-                              if (customCarrier.carrier === carrier && props.selectedService.toString() === customCarrier.service) {
-                                 return (
-                                    <ul>
-                                       <li>
-                                          {
-                                             customCarrier.rate
-                                          }
-                                       </li>
-                                    </ul>
-                                 )
-                              }
-                           })
-                        }
-                     </td>
-                  </tr>
-               )
-            })
-         }
-
+         {Object.keys(carrierRatesV2).map(carrier => {
+            const currentCarrier = carrierRatesV2[carrier];
+            const currentService = selectedServicesV2[carrier];
+            return (
+               <tr>
+                  <td className="carrier-table-carrier">
+                     {carrier}
+                  </td>
+                  <td className="carriers-table-select-cell">
+                     <select onChange={handleOptionChange(carrier)}>
+                        {(currentCarrier.serviceTypes || []).map(type => (
+                           <option value={type}>
+                              {type}
+                           </option>
+                        ))}
+                     </select>
+                  </td>
+                  <td className="carrier-table-rates">
+                     {currentCarrier.rateByService[currentService || currentCarrier.serviceTypes[0]]}
+                  </td>
+               </tr>
+            )
+         })}
       </tbody>
-
    </table>
 )
 
