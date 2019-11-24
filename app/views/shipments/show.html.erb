@@ -4,34 +4,3 @@
 </nav>
 
 <%= react_component 'Carriers', props: { shipment: @shipment } %>
-
-
-<%
-=begin%>
- <div>
-  <div>
-    <div>
-      <h3> Package Information
-        <p><%= @shipment[:parcel][:id] %></p>
-        <p><%= @shipment[:parcel][:created_at] %></p>
-        <p><%= @shipment[:parcel][:height] %></p>
-        <p><%= @shipment[:parcel][:length] %></p>
-        <p><%= @shipment[:parcel][:width] %></p>
-        <p><%= @shipment[:parcel][:predefined_package] %> </p>
-      </div>
-    <div>
-    <h3> Carriers</h3>
-    <% @shipment[:rates].each do |rate|%>
-      <p>Carrier: <%= rate[:carrier] %></p>
-      <p>Service: <%= rate[:service] %></p>
-      <p>Rate: <%= rate[:rate] %></p>
-    <% end %>
-    <% if @shipment[:rates].empty? %>
-      <p>sorry that size is not supported for this carrier service</p>
-    <% end%>
-  </div>
-</div> 
-<%
-=end%>
-
-<!-- service carrier rate -->

@@ -22,31 +22,6 @@ export default class Carriers extends React.Component {
         }
     }
 
-    // componentDidMount() {
-    //     this.getCarriers()
-    //     this.getCarrierRates()
-    // }
-
-    // getCarriers = () => {
-    //     const uniqCarriers = this.state.carrierRates.map(c => { return c.carrier })
-    //     const filteredCarriers = uniqCarriers.filter(function (car, index) {
-    //         return uniqCarriers.indexOf(car) === index
-    //     })
-    //     this.setState({ carrierName: filteredCarriers })
-    // }
-
-    // getCarrierRates = () => {
-    //     const carrierRatesObj = this.state.carrierRates
-    //     const carrierRates = carrierRatesObj.map(carrier => {
-    //         return ({
-    //             carrier: carrier.carrier,
-    //             service: carrier.service,
-    //             rate: carrier.rate
-    //         })
-    //     })
-    //     this.setState({ getCarrierRates: carrierRates })
-    // }
-
     handleOptionChange = carrierType => e => this.setState({ selectedServicesV2: { ...this.state.selectedServicesV2, [carrierType]: e.target.value } })
 
     render() {
