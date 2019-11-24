@@ -1,0 +1,96 @@
+.shipment-form-group-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  position: relative;
+  font-family: 'Comfortaa', cursive;
+}
+
+.shipment-to-h1{
+  position: relative;
+  color: #4D5C99;
+  margin: 2rem 2rem 0 2rem;
+}
+
+.shipment-to-address {
+  position: relative;
+  width:100%;
+  background: linear-gradient(25deg, #a9b8f7 0%, rgba(224,229,250,1) 100%);
+}
+
+.shipment-to-wrap{
+  position: absolute;
+  top: 15%;
+  left: 15%
+}
+
+.shipment-to-address label{
+  display: inline-block; 
+  margin: 0 2rem 0 2rem;
+  width: 100px;
+
+}
+.shipment-to-address input{
+  position: relative;
+  margin-top: 1rem;
+  right: 30px;
+  width: 200px;
+  height: 2rem;
+  font-size: 15px;
+  text-indent: 1rem;
+  border-radius: 2px;
+  border: 1px solid #4D5C99;
+  outline: none;
+  color: #4D5C99;
+} 
+/* <------------from---------> */
+
+.shipment-from-h1{
+  color: #4D5C99;
+  position: relative;
+  width: 100%; 
+  margin: 2rem 2rem 0 2rem;
+}
+
+.shipment-from-address {
+  position: relative;
+  width:100%;
+}
+
+.shipment-from-wrap{
+  position: absolute;
+  top: 15%;
+  left: 15%
+}
+
+.shipment-from-address label{
+  display: inline-block; 
+  margin: 0 2rem 0 2rem;
+  width: 100px;
+}
+
+.shipment-from-address input{
+  background-color: #E0E5FA; 
+  position: relative;
+  margin-top: 1rem;
+  right: 30px;
+  width: 200px;
+  height: 2rem;
+  font-size: 15px;
+  text-indent: 1rem;
+  border-radius: 2px;
+  border: 1px solid #4D5C99;
+  outline: none;
+  color: #4D5C99;
+  box-shadow: inset 0px 0px 5px 4px rgba(169,184,247,1);
+}
+
+.shipment-from-address input[type="submit"]{
+  background-color: #fcdac7; 
+  position: absolute;
+  margin-top: 2rem;
+  width:200px;
+  text-align: center;
+  box-shadow: inset 0px 0px 5px 4px #FFC7A6;
+  font-size: 15px;
+}

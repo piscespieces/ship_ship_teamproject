@@ -1,74 +1,80 @@
-<nav class="dashboard-nav">
-  <a class="dashboard-nav-link"><%= link_to "Home", root_path %></a>
-</nav>
+
 <%= form_with(url: "/shipments", method: "post") do %>
-<div class="dashboard-form-group-container">
-  <div class="dashboard-to-address">
-  <h1>To: </h1>
-    <div>
-      <%= label_tag(:to_street1, "Street1:") %>
-      <%= text_field_tag(:to_street1) %>
-    </div>
-    <div>
-      <%= label_tag(:to_street2, "Street2:") %>
-      <%= text_field_tag(:to_street2) %>
-    </div>
-    <div>
-      <%= label_tag(:to_city, "City") %>
-      <%= text_field_tag(:city) %>
-    </div>
-    <div>
-      <%= label_tag(:to_state, "State") %>
-      <%= text_field_tag(:to_state) %>
-    </div>
-    <div>
-      <%= label_tag(:to_zip, "Zip") %>
-      <%= text_field_tag(:to_zip) %>
-    </div>
-    <div>
-      <%= label_tag(:to_country, "Country") %>
-      <%= text_field_tag(:to_country) %>
-    </div>
-    <div>
-      <%= label_tag(:to_company, "Company") %>
-      <%= text_field_tag(:to_company) %>
-    </div>
-    <div>
-      <%= label_tag(:to_phone, "Phone") %>
-      <%= text_field_tag(:to_phone) %>
-    </div>
+<div class="shipment-form-group-container">
+  <div class="shipment-to-address">
+  <h1 class="shipment-to-h1">To: </h1>
+    <div class="shipment-to-wrap">
+      <div>
+        <%= label_tag(:to_street1, "Street1") %>
+        <%= text_field_tag(:to_street1) %>
+      </div>
+      <div>
+        <%= label_tag(:to_street2, "Street2") %>
+        <%= text_field_tag(:to_street2) %>
+      </div>
+      <div>
+        <%= label_tag(:to_city, "City") %>
+        <%= text_field_tag(:city) %>
+      </div>
+      <div>
+        <%= label_tag(:to_state, "State") %>
+        <%= text_field_tag(:to_state) %>
+      </div>
+      <div>
+        <%= label_tag(:to_zip, "Zip") %>
+        <%= text_field_tag(:to_zip) %>
+      </div>
+      <div>
+        <%= label_tag(:to_country, "Country") %>
+        <%= text_field_tag(:to_country) %>
+      </div>
+      <div>
+        <%= label_tag(:to_company, "Company") %>
+        <%= text_field_tag(:to_company) %>
+      </div>
+      <div>
+        <%= label_tag(:to_phone, "Phone") %>
+        <%= text_field_tag(:to_phone) %>
+      </div>
+    </div> 
   </div>
 
-  <div class="dashboard-from-address">
-    <h1>From: </h1>
-    <div class="form-group">
+  <div class="shipment-from-address">
+  <h1 class="shipment-from-h1">From: </h1>
+    <div class="shipment-from-wrap">
+    <div>
       <%= label_tag(:from_street1, "Street1") %>
       <%= text_field_tag(:from_street1) %>
     </div>
-    <div class="form-group">
+    <div>
+      <%= label_tag(:from_street1, "Street2") %>
+      <%= text_field_tag(:from_street1) %>
+    </div>
+    <div>
       <%= label_tag(:from_city, "City") %>
       <%= text_field_tag(:from_city) %>
     </div>
-    <div class="form-group">
+    <div>
       <%= label_tag(:from_state, "State") %>
       <%= text_field_tag(:from_state) %>
     </div>
-    <div class="form-group">
+    <div>
       <%= label_tag(:from_zip, "Zip") %>
       <%= text_field_tag(:from_zip) %>
     </div>
-    <div class="form-group">
+    <div>
       <%= label_tag(:from_country, "Country") %>
       <%= text_field_tag(:from_country) %>
     </div>
-    <div class="form-group">
+    <div>
       <%= label_tag(:from_company, "Company") %>
       <%= text_field_tag(:from_company, current_user.profile&.name) %>
     </div>
-    <div class="form-group">
+    <div>
       <%= label_tag(:from_phone, "Phone") %>
       <%= text_field_tag(:from_phone, current_user.profile&.phone) %>
     </div>
+      <%= submit_tag('Submit!') %>
   </div>
 </div>
 
@@ -76,7 +82,5 @@
   <%= hidden_field_tag(:width, params[:width]) %>
   <%= hidden_field_tag(:height, params[:height]) %>
   <%= hidden_field_tag(:weight, params[:weight]) %>
-
-  <%= submit_tag('Submit Form') %>
 
 <% end %>
