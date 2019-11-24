@@ -1,17 +1,25 @@
 
-<%= link_to "home", root_path %>
+<main class="dashboard-main">
+  <h1>Dashboard</h1>
+    <div>
+    Would you like to finish setting up your profile?
+    <%= link_to "Setup Profile", edit_user_registration_path %>
+    </div>
 
-<h1>This is the dashboard</h1>
+    <div class="dashboard-create">
+      <%= link_to "Create Shipment", new_parcel_path %>
+    </div>
 
-<div>
-Would you like to finish setting up your profile?
-<%= link_to "Setup Profile", root_path %>
-</div>
-
-<div>
-Would you like to create a new shipment?
-<%= link_to "Create Shipment", new_parcel_path %>
-</div>
-
-<h2>ACCOUNT INFO</h2>
-<p>Information will populate here once the new user profile has been setup?</p>
+    <div class="dashboard-account">
+    <h2>ACCOUNT INFO</h2>
+      <% if user_signed_in? %>
+      
+      <div>
+        <%= text_field_tag(:from_company, current_user.profile&.name) %>
+      </div>
+      <div> 
+        <%= text_field_tag(:from_phone, current_user.profile&.phone) %>
+      <% end %> 
+      </div>
+    </div>
+</main>
