@@ -1,91 +1,69 @@
+<div>
 <a href="/">Home</a>
 <% if user_signed_in? %>
   <a href="/dashboard">Dashboard</a>
 <% end %>
-<h1 class="new-shipment-header">BUILD</h1>
-<div class="new-shipment-page">
-  <div id="new-shipment-cube">
-  </div>
-
-  <div
-    class="inputRow clear"
-    id="dimensionsNotRound"
-    data-role="tooltip"
-  >
-
-    <label class="grid-8"></label>
-    <br/>
-    <br/>
-    <div>
-      <span>Length</span>
-      <input
-        id="inp-length"
-        type="range"
-        min="1"
-        max="33"
-        value="0"
-      />
-      <input
-        id="numberL"
-        min="1"
-        max="33"
-        type="number"
-        value="0"
-      />
-      <br/>
-      <br/>
-    </div>
-    <div class="new-shipment-input">
-      <span>Width</span>
-      <input
-        id="inp-width"
-        type="range"
-        min="1"
-        max="33"
-        value="0"
-      />
-      <input
-        id="numberW"
-        min="1"
-        max="33"
-        type="number"
-        value="0"
-      />
-      <br/>
-      <br/>
-    </div>
-    <div class="new-shipment-input">
-      <span>Height</span>
-      <input
-        id="inp-height"
-        type="range"
-        min="1"
-        max="33"
-        value="0"
-      />
-      <input
-        id="numberH"
-        min="1"
-        max="33"
-        type="number"
-        value="0"
-      />
-      <br/>
-      <br/>
-    </div>
-    <div class="new-shipment-input">
-      <span>Weight</span>
-      <input
-        id="weightO"
-        min="0"
-        max="600"
-        type="number"
-        value="0"
-      />
-      
-    
-    </div>
-    <%= image_tag("next.png", id: "next") %>
-    </div>
+</div>
+<div class="new-shipment-background">
+  <div id="new-shipment-cube"><p class="new-shipment-title">BUILD</p></div>
+      <div class="new-shipment-inputs">
+        <span>LENGTH</span>
+          <input
+            id="inp-length"
+            type="range"
+            min="1"
+            max="33"
+            value="0"/>
+          <input
+            id="numberL"
+            min="1"
+            max="33"
+            type="number"
+            value="0">Inches
+          </input>
+        <span>WIDTH</span>
+          <input
+            id="inp-width"
+            type="range"
+            min="1"
+            max="33"
+            value="0"/>
+          <input
+            id="numberW"
+            min="1"
+            max="33"
+            type="number"
+            value="0">Inches
+          </input>
+        <span>HEIGHT</span>
+          <input
+            id="inp-height"
+            type="range"
+            min="1"
+            max="33"
+            value="0"/>
+          <input
+            id="numberH"
+            min="1"
+            max="33"
+            type="number"
+            value="0">Inches
+          </input>
+        <span>WEIGHT</span>
+          <input
+            id="inp-weight"
+            min="0"
+            max="600"
+            type="range"
+            value="0"/>
+          <input
+            id="numberWeight"
+            min="0"
+            max="600"
+            type="number"
+            value="0"/>Ounces
+          </input>
+        <%= image_tag("next.png", id: "next") %>
   </div>
 </div>
+      
