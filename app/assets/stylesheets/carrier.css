@@ -59,6 +59,10 @@
   padding: 0;
 }
 
+.carriers-checkbox {
+  text-align: center;
+}
+
 .carriers-section-footer {
   width: 100vw;
   height: 20vh;

@@ -31,6 +31,9 @@ const CarriersTable = ({ carrierRatesV2, selectedServicesV2, handleOptionChange 
                   <td className="carriers-table-rates">
                      {currentCarrier.rateByService[currentService || currentCarrier.serviceTypes[0]]}
                   </td>
+                  <td className="carriers-checkbox">
+                     <input type="checkbox" name="" value="" />
+                  </td>
                </tr>
             )
          })}
