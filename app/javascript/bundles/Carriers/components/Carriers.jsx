@@ -17,22 +17,22 @@ export default class Carriers extends React.Component {
 
     getCarriers = () => {
         const uniqCarriers = this.state.carrierRates.map(c => { return c.carrier })
-        const filterCarriers = uniqCarriers.filter(function (car, index) {
+        const filteredCarriers = uniqCarriers.filter(function (car, index) {
             return uniqCarriers.indexOf(car) === index
         })
-        this.setState({ carrierName: filterCarriers })
+        this.setState({ carrierName: filteredCarriers })
     }
 
     getCarrierRates = () => {
-        const carrierRates = this.state.carrierRates
-        const mapCustomCarrierRates = carrierRates.map(carrier => {
+        const carrierRatesObj = this.state.carrierRates
+        const carrierRates = carrierRatesObj.map(carrier => {
             return ({
                 carrier: carrier.carrier,
                 service: carrier.service,
                 rate: carrier.rate
             })
         })
-        this.setState({ getCarrierRates: mapCustomCarrierRates })
+        this.setState({ getCarrierRates: carrierRates })
     }
 
     handleOptionChange = e => {
@@ -65,9 +65,6 @@ export default class Carriers extends React.Component {
                 <section className="carriers-section-footer">
 
                 </section>
-
-                {/* <h1>Carriers JSX</h1>
-                {this.props.shipment.buyer_address.street1} */}
             </>
         )
     }
