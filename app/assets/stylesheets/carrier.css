@@ -2,3 +2,68 @@
   background-color:#E0E5FA;
   height: 4rem;
 }
+
+.carriers-header {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 20vh;
+}
+
+.carriers-header-header {
+    display: flex;
+    align-items: center;
+    color: #4D5C99;
+}
+
+.carriers-tablehead {
+  align-items: center;
+  background: #E0E5FA;
+}
+
+.carriers-tablehead-tr {
+  height: 5vh;
+}
+
+.carriers-tablehead-th {
+  color: #FFC7A6;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.carriers-main {
+  width: 100vw;
+  height: 80vh;
+}
+
+.carriers-table {
+  width: 100vw;
+  height: 90vh;
+  background: white;
+}
+
+.carriers-table-carrier {
+  text-align: center;
+}
+
+.carriers-table-select-cell {
+  text-align: center;
+}
+
+.carriers-table-rates {
+  text-align: center;
+}
+
+.carriers-table-rates ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carriers-checkbox {
+  text-align: center;
+}
+
+.carriers-section-footer {
+  width: 100vw;
+  height: 20vh;
+}
