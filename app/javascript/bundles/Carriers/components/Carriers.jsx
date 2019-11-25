@@ -5,28 +5,35 @@ import CarriersTable from './CarriersTable'
 export default class Carriers extends React.Component {
     constructor(props) {
         super(props)
-        const carrierRatesV2 = props.shipment.rates.reduce((acc, { carrier, rate, service }) => {
+        const carriers = props.shipment.rates.reduce((acc, { carrier, rate, service, delivery_days }) => {
             acc[carrier] = acc[carrier] || {};
-            acc[carrier].serviceTypes = [...(acc[carrier].serviceTypes || []), service]
-            acc[carrier].rateByService = { ...acc[carrier].rateByService, [service]: rate }
+            acc[carrier][service] = { rate, delivery_days }
             return acc;
         }, {})
+        const selectedServices = Object.keys(carriers).reduce((acc, carrierName) => {
+            acc[carrierName] = Object.keys(carriers[carrierName])[0]
+            return acc
+        }, {})
         this.state = {
-            carrierRates: this.props.shipment.rates,
-            getCarrierRates: [],
-            carrierName: [],
-            services: [],
-            selectedService: [],
-            selectedServicesV2: {},
-            carrierRatesV2,
+            selectedServices,
+            carriers,
+            finalSelection: {}
         }
     }
 
-    handleOptionChange = carrierType => e => this.setState({ selectedServicesV2: { ...this.state.selectedServicesV2, [carrierType]: e.target.value } })
+    handleOptionChange = carrierType => e => {
+        this.setState({
+            selectedServices: { ...this.state.selectedServices, [carrierType]: e.target.value },
+            finalSelection: {}
+        })
+    }
+
+    handleFinalSelect = (carrier, service) => {
+        this.setState({ finalSelection: { carrier, service }})
+    }
 
     render() {
-        const { carrierRates, carrierName, getCarrierRates, selectedService, carrierRatesV2, selectedServicesV2 } = this.state
-
+        const { carriers, selectedServices, finalSelection } = this.state
         return (
             <>
                 <div className="carriers-header">
@@ -36,17 +43,18 @@ export default class Carriers extends React.Component {
                 </div>
                 <main className="carriers-main">
                     <CarriersTable
-                        selectedServicesV2={selectedServicesV2}
-                        carrierRatesV2={carrierRatesV2}
-                        carrierName={carrierName}
-                        carrierRates={carrierRates}
-                        getCarrierRates={getCarrierRates}
+                        selectedServices={selectedServices}
+                        carriers={carriers}
                         handleOptionChange={this.handleOptionChange}
-                        selectedService={selectedService}
+                        finalSelection={finalSelection}
+                        handleFinalSelect={this.handleFinalSelect}
                     />
                 </main>
                 <section className="carriers-section-footer">
-
+                    {
+                        finalSelection.service &&
+                        <p>You selected {finalSelection.carrier}: {finalSelection.service}</p>
+                    }
                 </section>
             </>
         )

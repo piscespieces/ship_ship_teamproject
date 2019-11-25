@@ -1,44 +1,62 @@
 import React from 'react'
 
-const CarriersTable = ({ carrierRatesV2, selectedServicesV2, handleOptionChange }) => (
-   <table className="carriers-table">
-      <thead className="carriers-tablehead">
-         <tr className="carriers-tablehead-tr">
-            <th className="carriers-tablehead-th">Carrier</th>
-            <th className="carriers-tablehead-th">Service</th>
-            <th className="carriers-tablehead-th">Rate</th>
-            <th className="carriers-tablehead-th">Placeholder</th>
-         </tr>
-      </thead>
-      <tbody>
-         {Object.keys(carrierRatesV2).map(carrier => {
-            const currentCarrier = carrierRatesV2[carrier];
-            const currentService = selectedServicesV2[carrier];
-            return (
-               <tr>
-                  <td className="carriers-table-carrier">
-                     {carrier}
-                  </td>
-                  <td className="carriers-table-select-cell">
-                     <select onChange={handleOptionChange(carrier)}>
-                        {(currentCarrier.serviceTypes || []).map(type => (
-                           <option value={type}>
-                              {type}
-                           </option>
-                        ))}
-                     </select>
-                  </td>
-                  <td className="carriers-table-rates">
-                     {currentCarrier.rateByService[currentService || currentCarrier.serviceTypes[0]]}
-                  </td>
-                  <td className="carriers-checkbox">
-                     <input type="checkbox" name="" value={[carrier, currentService || currentCarrier.serviceTypes[0]]} />
-                  </td>
-               </tr>
-            )
-         })}
-      </tbody>
-   </table>
-)
+const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSelection, handleFinalSelect }) => {
+      return (
+      <table className="carriers-table">
+         <thead className="carriers-tablehead">
+            <tr className="carriers-tablehead-tr">
+               <th className="carriers-tablehead-th">Carrier</th>
+               <th className="carriers-tablehead-th">Service</th>
+               <th className="carriers-tablehead-th">Rate</th>
+               <th className="carriers-tablehead-th">Days</th>
+               <th className="carriers-tablehead-th">Placeholder</th>
+            </tr>
+         </thead>
+         <tbody>
+            {Object.keys(carriers).map(carrierName => {
+               const selectedService = carriers[carrierName][selectedServices[carrierName]]
+               const selectedServiceName = Object.keys(carriers[carrierName]).find(serviceName => (
+                  serviceName === selectedServices[carrierName]
+               ))
+               return (
+                  <tr key={carrierName}>
+                     <td className="carriers-table-carrier">
+                        {carrierName}
+                     </td>
+                     <td className="carriers-table-select-cell">
+                        <select onChange={handleOptionChange(carrierName)}>
+                           {
+                              Object.keys(carriers[carrierName]).map(serviceName => (
+                                 <option key={serviceName}>
+                                    { serviceName }
+                                 </option>
+                              ))
+                           }
+                        </select>
+                     </td>
+                     <td className="carriers-table-rates">
+                        { selectedService.rate }
+                     </td>
+                     <td className="carriers-table-rates">
+                        { selectedService.delivery_days || 0 }
+                     </td>
+                     <td className="carriers-checkbox">
+                        <input
+                           type="checkbox"
+                           name="selectedService"
+                           checked={
+                              finalSelection.carrier === carrierName &&
+                              finalSelection.service === selectedServiceName
+                           }
+                           onChange={() => handleFinalSelect(carrierName, selectedServiceName)}
+                        />
+                     </td>
+                  </tr>
+               )
+            })}
+         </tbody>
+      </table>
+   )
+}
 
 export default CarriersTable
