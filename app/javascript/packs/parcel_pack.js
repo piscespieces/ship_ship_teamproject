@@ -16,9 +16,9 @@ document.addEventListener("turbolinks:load", function(){
 
 
 function enableCube(){
-    let widthEl = document.getElementById('inp-width') + 16
-    let heightEl = document.getElementById('inp-height') + 16
-    let lengthEl = document.getElementById('inp-length') + 16
+    let widthEl = document.getElementById('inp-width')
+    let heightEl = document.getElementById('inp-height')
+    let lengthEl = document.getElementById('inp-length')
 
     if(widthEl && heightEl && lengthEl){
 
