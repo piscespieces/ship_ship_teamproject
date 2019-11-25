@@ -60,9 +60,9 @@ function enableCube(){
     let scene = new THREE.Scene();
 
     // cube
-    cube = new THREE.Mesh(new THREE.CubeGeometry(3, 3, 3),
+    cube = new THREE.Mesh(new THREE.CubeGeometry(4, 4, 4),
     new THREE.MeshLambertMaterial({
-        color: '#deb887'
+        color:'#e6f8ff' 
     })
     );
     cube.overdraw = true;
@@ -81,6 +81,9 @@ function enableCube(){
 
     // start animation
     animate();
+    cube.scale.x = 16
+    cube.scale.y = 16
+    cube.scale.z = 16 
 
     oninput= function() {
     let width = parseInt(document.getElementById('inp-width').value)
