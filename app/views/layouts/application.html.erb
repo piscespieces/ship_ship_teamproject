@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="http://www.html5canvastutorials.com/libraries/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'carriers-bundle' %>
@@ -14,16 +15,38 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <nav class="navbar-text float-right">
-      <% if user_signed_in? %>
-        Logged in as: <strong><%= current_user.email %></strong>
-        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'nav-link'%>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-      <% else %>
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-      <% end %>
-    </nav>
+      <nav class="devise-dropdown">
+        <button onclick="handleDropdown()" class="devise-dropbtn">Dropdown</button>
+          <div id="devise-myDropdown" class="devise-dropdown-content">
+          <%= link_to "home", root_path %>
+            <% if user_signed_in? %>
+              Logged in as: <strong><%= current_user.email %></strong>
+              <%= link_to 'Edit Profile', edit_user_registration_path, :class => 'nav-link'%>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            <% else %>
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> 
+              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+            <% end %>  
+          </div>    
+      </nav>
     <%= yield %>
   </body>
+  <script>  
+    const handleDropdown = () => {
+      document.getElementById("devise-myDropdown").classList.toggle("show")
+    }
+
+    window.onclick = (event) =>{
+      if (!event.target.matches('.devise-dropbtn')) {
+        const dropdowns = document.getElementsByClassName("devise-dropdown-content")
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i]
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show')
+          }
+        }
+      }
+    }
+  </script>
 </html>
+
