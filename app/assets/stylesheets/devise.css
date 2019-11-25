@@ -1,27 +1,33 @@
 
-.devise-dropdown nav{
-  position: absolute;
+.devise-dropdown{
+  position: fixed;
   z-index: 2;
-  height: 100vh;
+  top: 2px;
+  left: 2px;
 }
-/* -------------------ONE EXAMPLE----------------------- */
 
 .devise-dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
+  background-image: url(s.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+}
+
+.devise-dropbtn {
   font-size: 16px;
   border: none;
   cursor: pointer;
 }
 
-.devise-dropbtn:hover, .devise-dropbtn:focus {
-  background-color: #2980B9;
+.devise-home-button{
+  width: 5rem;
+  height: 5rem;
 }
 
-.devise-dropdown {
-  position: relative;
-  display: inline-block;
+.devise-dropbtn:hover, .devise-dropbtn:focus {
+  background-color: #2980B9;
 }
 
 .devise-dropdown-content {
