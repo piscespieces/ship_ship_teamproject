@@ -36,7 +36,7 @@
         <%= label_tag(:to_phone, "Phone") %>
         <%= text_field_tag(:to_phone) %>
       </div>
-    </div> 
+    </div>
   </div>
 
   <div class="shipment-from-address">
@@ -44,27 +44,27 @@
     <div class="shipment-from-wrap">
     <div>
       <%= label_tag(:from_street1, "Street1") %>
-      <%= text_field_tag(:from_street1 ) %>
+      <%= text_field_tag(:from_street1, current_user.primary_location&.street1) %>
     </div>
     <div>
       <%= label_tag(:from_street2, "Street2") %>
-      <%= text_field_tag(:from_street2) %>
+      <%= text_field_tag(:from_street2, current_user.primary_location&.street2) %>
     </div>
     <div>
       <%= label_tag(:from_city, "City") %>
-      <%= text_field_tag(:from_city) %>
+      <%= text_field_tag(:from_city, current_user.primary_location&.city) %>
     </div>
     <div>
       <%= label_tag(:from_state, "State") %>
-      <%= text_field_tag(:from_state) %>
+      <%= text_field_tag(:from_state, current_user.primary_location&.state) %>
     </div>
     <div>
       <%= label_tag(:from_zip, "Zip") %>
-      <%= text_field_tag(:from_zip) %>
+      <%= text_field_tag(:from_zip, current_user.primary_location&.zip) %>
     </div>
     <div>
       <%= label_tag(:from_country, "Country") %>
-      <%= text_field_tag(:from_country) %>
+      <%= text_field_tag(:from_country, current_user.primary_location&.country) %>
     </div>
     <div>
       <%= label_tag(:from_company, "Company") %>
@@ -78,6 +78,14 @@
         <%= text_field_tag(:from_phone, current_user.profile&.phone) %>
       <% end%>
     </div>
+    <% if user_signed_in? %>
+      <div>
+          <%= label_tag :save %>
+          <%= select_tag :save, options_for_select(["No", "Yes", "Save as Primary Location"]) %>
+          
+
+      </div>
+    <% end %>
     <%= submit_tag('Submit!') %>
   </div>
 </div>

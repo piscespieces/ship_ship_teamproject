@@ -1,12 +1,10 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_with url: profile_url, method: :patch do |form| %>
-
   <div>
     <%= form.label :name, "Company / Name" %>
     <%= form.text_field :name, value: current_user.profile&.name %>
   </div>
-
   <div>
     <%= form.label :phone %>
     <%= form.text_field :phone, value: current_user.profile&.phone %>
@@ -14,6 +12,34 @@
 
   <%= form.submit "Update Profile" %>
 <% end %>
+
+<%= form_with url: location_url, method: :patch do |form| %>
+  <div>
+    <%= form.label :street1 %>
+    <%= form.text_field :street1, value: current_user.primary_location&.street1 %>
+  </div>
+  <div>
+    <%= form.label :street2 %>
+    <%= form.text_field :street2, value: current_user.primary_location&.street2 %>
+  </div>
+  <div>
+    <%= form.label :city %>
+    <%= form.text_field :city, value: current_user.primary_location&.city %>
+  </div>
+  <div>
+    <%= form.label :state %>
+    <%= form.text_field :state, value: current_user.primary_location&.state %>
+  </div>
+  <div>
+    <%= form.label :zip %>
+    <%= form.text_field :zip, value: current_user.primary_location&.zip %>
+  </div>
+  <div>
+    <%= form.label :country %>
+    <%= form.text_field :country, value: current_user.primary_location&.country %>
+  </div>
+  <%= form.submit "Update Primary Location" %>
+<% end%>
 
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
