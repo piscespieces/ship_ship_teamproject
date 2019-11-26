@@ -1,0 +1,46 @@
+#label-main {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.label-navbar-grid {
+   display: grid;
+   width: 100vw;
+   height: 15vh;
+   grid-template-columns: 1fr 1fr;
+}
+
+.label-navbar-leftgrid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.label-navbar-leftgrid h1 {
+   margin: 0;
+}
+
+.label-navbar-rightgrid {
+   background: #E0E5FA;
+}
+
+.label-leftside {
+   width: 50vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   padding-top: 5vh;
+}
+
+.label-rightside {
+   width: 50vw;
+   height: 100vh;
+   background: #E0E5FA;
+}
+
+#label-postagelabel {
+   width: 60%;
+   height: 70%;
+}
+

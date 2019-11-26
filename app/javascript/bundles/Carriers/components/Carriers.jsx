@@ -1,5 +1,6 @@
 import React from 'react'
 import CarriersTable from './CarriersTable'
+import Label from './Label'
 import axios from 'axios'
 
 export default class Carriers extends React.Component {
@@ -29,23 +30,29 @@ export default class Carriers extends React.Component {
     }
 
     handleFinalSelect = (carrier, service, id) => {
-        this.setState({ finalSelection: { carrier, service, id }})
+        this.setState({ finalSelection: { carrier, service, id } })
     }
 
     confirmSelection = selection => {
-        axios.patch(`/shipments/${this.props.shipment.id}`, { rate_id: selection.id }, { headers: {
-            'X-Requested-With': 'XMLHttpRequest',
-            'X-CSRF-TOKEN':     ReactOnRails.authenticityToken()
-        }}).then(response => window.location.href = response.data.location)
+        axios.patch(`/shipments/${this.props.shipment.id}`, { rate_id: selection.id }, {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRF-TOKEN': ReactOnRails.authenticityToken()
+            }
+        }).then(response => window.location.href = response.data.location)
     }
 
     render() {
         const { carriers, selectedServices, finalSelection } = this.state
-        if(this.props.shipment.tracking_code){
-            return(
+        const trackingCode = this.props.shipment.tracking_code
+        const postageLabel = this.props.shipment.postage_label.label_url
+        if (trackingCode) {
+            return (
                 <>
-                    <h1>Tracking Code: {this.props.shipment.tracking_code}</h1>
-                    <img src={this.props.shipment.postage_label.label_url} alt="label" />
+                    <Label
+                        trackingCode={trackingCode}
+                        postageLabel={postageLabel}
+                    />
                 </>
             )
         }
@@ -70,7 +77,7 @@ export default class Carriers extends React.Component {
                         finalSelection.service &&
                         <>
                             <p>You selected {finalSelection.carrier}: {finalSelection.service} ({finalSelection.id})</p>
-                            <button onClick={() => this.confirmSelection(finalSelection) }>
+                            <button onClick={() => this.confirmSelection(finalSelection)}>
                                 Print Label
                             </button>
                         </>
