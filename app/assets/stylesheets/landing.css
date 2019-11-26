@@ -81,6 +81,11 @@ p.notice, p.alert {
   background: papayawhip;
 }
 
+.landing-logo-imgtag {
+  width: 100%;
+  height: 100%;
+}
+
 .landing-left-logo-side {
   display: flex;
   align-items: center;

@@ -17,7 +17,7 @@ const Hero = () => {
             </div>
             <div className="landing-center-logo">
                <div id="landing-logo">
-                  <img src={logo} />
+                  <img className="landing-logo-imgtag" src={logo} />
                </div>
             </div>
             <div className="landing-right-logo-side">
