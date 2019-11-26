@@ -28,13 +28,12 @@
   <div class="dashboard-account">
   <h2>ACCOUNT INFO</h2>
     <% if user_signed_in? %>
-    
-    <div>
-      <%= text_field_tag(:from_company, current_user.profile&.name) %>
-    </div>
-    <div> 
-      <%= text_field_tag(:from_phone, current_user.profile&.phone) %>
+      <div>
+        <%= text_field_tag(:from_company, current_user.profile&.name) %>
+      </div>
+      <div> 
+        <%= text_field_tag(:from_phone, current_user.profile&.phone) %>
+      </div>
     <% end %> 
-    </div>
   </div>
 </main>
