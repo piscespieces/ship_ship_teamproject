@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../../../../assets/images/shipship_logo_2';
 
 const Hero = () => {
    return (
@@ -15,7 +16,9 @@ const Hero = () => {
                </div>
             </div>
             <div className="landing-center-logo">
-               <div id="landing-logo"></div>
+               <div id="landing-logo">
+                  <img src={logo} />
+               </div>
             </div>
             <div className="landing-right-logo-side">
             </div>
