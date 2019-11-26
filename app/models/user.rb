@@ -4,5 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one :profile, dependent: :destroy
-  has_many :location
+  has_many :locations
+
+  def primary_location
+    locations.find_by(primary: true)
+  end
 end

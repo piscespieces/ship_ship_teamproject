@@ -13,11 +13,12 @@
   <%= form.submit "Update Profile" %>
 <% end %>
 
-<%= form_with url: location_url, method: :post do |form| %>
+<%= form_with url: location_url, method: :patch do |form| %>
   <div>
     <%= form.label :street1 %>
-    <%= form.text_field :street1 %>
+    <%= form.text_field :street1, value: current_user.primary_location&.street1 %>
   </div>
+  <%= form.submit "Update Primary Location" %>
 <% end%>
 
 

@@ -1,19 +1,20 @@
-class LocationController < ApplicationController
+class LocationsController < ApplicationController
   def update
-    if current_user.location.update(
-        location.find_by(params[:id]).update!(:street1)
-      current_user.profile.update(street1: params[:street1])
-
+    if current_user.primary_location
+      current_user.primary_location
+      location = current_user.primary_location
+    else
+      location = current_user.locations.new(primary: true)
+    end
+    location.assign_attributes(
+      street1: params[:street1],
+      street2: params[:street2],
+      city: params[:city],
+      state: params[:state],
+      zip: params[:zip],
+      country: params[:country]
     )
-  end
-
-  def create
-    current_user.location.create(
-                  street1: params[:street1],
-                  street2: params[:street1],
-                  city: params[:city],
-                  state: params[:state],
-                  zip: params[:zip]
-    )
+    location.save
+    redirect_back fallback_location: edit_user_registration_path, notice: "Primary Location updated!"
   end
 end

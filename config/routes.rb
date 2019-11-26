@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :parcels, only: [:new]
   resources :shipments, only: [:create, :show, :new]
   resource :profile, only: [:update]
-  resource :location, only: [:create, :update, :destroy]
+  resource :location, only: [:update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 
