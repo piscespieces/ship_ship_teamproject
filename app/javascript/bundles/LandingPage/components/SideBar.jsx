@@ -2,7 +2,7 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 
 const SideBar = () => {
-   const props = useSpring({ opacity: 1, from: { opacity: 0 } })
+   const props = useSpring({ config: { duration: 1250 }, opacity: 1, from: { opacity: 0 } })
    return (
       <animated.div style={props}>
          <div className="landing-sidebar">
