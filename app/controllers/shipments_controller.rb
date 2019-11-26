@@ -14,6 +14,16 @@ class ShipmentsController < ApplicationController
       parcel: parcel,
       carrier_accounts: [""]
     )
+    if params[:save] == "Save as Primary Location"
+      if current_user.primary_location
+        current_user.primary_location.update(get_params[:from])
+      else
+        current_user.locations.create(get_params[:from].merge(primary: true))
+      end
+    end
+
+    current_user.locations.find_or_create_by(get_params[:to])
+    
     redirect_to "/shipments/#{@shipment[:id]}"
   end 
 

@@ -17,4 +17,5 @@ class LocationsController < ApplicationController
     location.save
     redirect_back fallback_location: edit_user_registration_path, notice: "Primary Location updated!"
   end
+
 end
