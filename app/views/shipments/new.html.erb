@@ -36,7 +36,11 @@
         <%= label_tag(:to_phone, "Phone") %>
         <%= text_field_tag(:to_phone) %>
       </div>
-    </div> 
+      <div>
+        <%= label_tag :save %>
+        <%= select_tag :save, options_for_select(["No", "Yes", "Save as Primary Location"]) %>
+      </div>
+    </div>
   </div>
 
   <div class="shipment-from-address">
