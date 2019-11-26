@@ -1,17 +1,21 @@
 import React from 'react'
+import { useSpring, animated } from 'react-spring'
 
 const SideBar = () => {
+   const props = useSpring({ opacity: 1, from: { opacity: 0 } })
    return (
-      <div class="landing-sidebar">
-         <ul class="landing-sidebar-options">
-            <li><a href="/users/sign_in">Login</a></li>
-            <li><a href="/users/sign_up">SignUp</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-         </ul>
-         <div class="landing-ship-it">
-            <h1><a href="/parcels/new">SHIP IT!</a></h1>
+      <animated.div style={props}>
+         <div className="landing-sidebar">
+            <ul className="landing-sidebar-options">
+               <li><a href="/users/sign_in">Login</a></li>
+               <li><a href="/users/sign_up">SignUp</a></li>
+               <li><a href="/dashboard">Dashboard</a></li>
+            </ul>
+            <div className="landing-ship-it">
+               <h1><a href="/parcels/new">SHIP IT!</a></h1>
+            </div>
          </div>
-      </div>
+      </animated.div>
    )
 }
 

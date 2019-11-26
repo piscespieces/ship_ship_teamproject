@@ -17,7 +17,7 @@ p.notice, p.alert {
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  background: #E0E5FA;
+  background: linear-gradient(25deg, #A9B8F7 0%, rgba(224,229,250,1) 100%);
   position: fixed;
   right: 0px;
 }
