@@ -200,5 +200,18 @@ p.notice, p.alert {
 }
 
 /* CONTACT FORM */
+.landing-contact-form{
+  display:grid;
+  justify-content: center;
+  margin-top:10vh;
+}
+.landing-contact-form .form-input{
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+}
+.form-input label{
+  font-size:18px;
+}
 
 
