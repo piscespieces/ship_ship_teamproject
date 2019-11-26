@@ -48,7 +48,7 @@ const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSe
                               finalSelection.carrier === carrierName &&
                               finalSelection.service === selectedServiceName
                            }
-                           onChange={() => handleFinalSelect(carrierName, selectedServiceName)}
+                           onChange={() => handleFinalSelect(carrierName, selectedServiceName, selectedService.id)}
                         />
                      </td>
                   </tr>
