@@ -1,13 +1,13 @@
 import React from 'react'
 import CarriersTable from './CarriersTable'
-
+import axios from 'axios'
 
 export default class Carriers extends React.Component {
     constructor(props) {
         super(props)
-        const carriers = props.shipment.rates.reduce((acc, { carrier, rate, service, delivery_days }) => {
+        const carriers = props.shipment.rates.reduce((acc, { carrier, rate, service, id, delivery_days }) => {
             acc[carrier] = acc[carrier] || {};
-            acc[carrier][service] = { rate, delivery_days }
+            acc[carrier][service] = { rate, delivery_days, id }
             return acc;
         }, {})
         const selectedServices = Object.keys(carriers).reduce((acc, carrierName) => {
@@ -28,12 +28,27 @@ export default class Carriers extends React.Component {
         })
     }
 
-    handleFinalSelect = (carrier, service) => {
-        this.setState({ finalSelection: { carrier, service }})
+    handleFinalSelect = (carrier, service, id) => {
+        this.setState({ finalSelection: { carrier, service, id }})
+    }
+
+    confirmSelection = selection => {
+        axios.patch(`/shipments/${this.props.shipment.id}`, { rate_id: selection.id }, { headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-CSRF-TOKEN':     ReactOnRails.authenticityToken()
+        }}).then(response => window.location.href = response.data.location)
     }
 
     render() {
         const { carriers, selectedServices, finalSelection } = this.state
+        if(this.props.shipment.tracking_code){
+            return(
+                <>
+                    <h1>Tracking Code: {this.props.shipment.tracking_code}</h1>
+                    <img src={this.props.shipment.postage_label.label_url} alt="label" />
+                </>
+            )
+        }
         return (
             <>
                 <div className="carriers-header">
@@ -53,7 +68,12 @@ export default class Carriers extends React.Component {
                 <section className="carriers-section-footer">
                     {
                         finalSelection.service &&
-                        <p>You selected {finalSelection.carrier}: {finalSelection.service}</p>
+                        <>
+                            <p>You selected {finalSelection.carrier}: {finalSelection.service} ({finalSelection.id})</p>
+                            <button onClick={() => this.confirmSelection(finalSelection) }>
+                                Print Label
+                            </button>
+                        </>
                     }
                 </section>
             </>

@@ -15,9 +15,17 @@ class ShipmentsController < ApplicationController
       carrier_accounts: [""]
     )
     redirect_to "/shipments/#{@shipment[:id]}"
-  end 
+  end
 
-  def show 
+  def update
+    rate_id = params[:rate_id]
+    shipment_id = params[:id]
+    shipment = EasyPost::Shipment.retrieve(shipment_id)
+    shipment.buy(rate: { id: rate_id })
+    render json: { location: "/shipments/#{shipment[:id]}" }
+  end
+
+  def show
     shipment_id = params[:id]
     @shipment = EasyPost::Shipment.retrieve(shipment_id)
   end 
