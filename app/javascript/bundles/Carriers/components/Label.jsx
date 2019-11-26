@@ -16,7 +16,14 @@ const Label = props => {
                <img id="label-postagelabel" src={props.postageLabel} alt="label" />
             </div>
             <div className="label-rightside">
-
+               <ul className="label-ul">
+                  <li>Email</li>
+                  <li>Download</li>
+                  <li>Print</li>
+                  <li>Save</li>
+                  <li>DONE!</li>
+                  <li>CREATE NEW!</li>
+               </ul>
             </div>
          </main>
       </>
