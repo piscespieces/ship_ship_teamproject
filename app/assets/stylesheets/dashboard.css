@@ -99,3 +99,107 @@
   background: #FFC7A6;
   transform: rotateY(180deg);
 }
+
+/* <!-----------------------------------> */
+
+.container {
+  width: 220px;
+  height: 220px;
+  display: flex;
+          justify-content: center;
+          align-items: center;
+}
+
+.box {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: box-shadow ease 1s;
+}
+
+.icon {
+  position: relative;
+  margin-top: 8px;
+  transition: all 0.6s ease;
+  transition-delay: 0.32s;
+  will-change: transform;
+}
+
+.icon_bg {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 1px solid rgba(225, 227, 232, 0.18);
+  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+  transition-delay: 0.32s;
+  will-change: transform;
+}
+
+.super-box:hover .box {
+  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  transition-delay: 0.32s;
+}
+
+.super-box:hover .icon_bg {
+  transform: translateY(-32px) scale(6);
+}
+
+.super-box:hover .icon {
+  transform: translateY(-48px) scale(1.4);
+}
+
+.super-box {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text {
+  position: relative;
+  top: -32px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.4s ease;
+  transition-delay: 0.32s;
+}
+
+.super-box:hover .text {
+  opacity: 0;
+  transform: translateY(-4px) scale(.8);
+  
+}
+
+.box::after {
+  content: "this is the content to add";
+  position: absolute;
+  opacity: 0;
+  font-size: 13px;
+  line-height: 20px;
+  transition: all 0.3s ease;
+  transition-delay: 0.32s;
+}
+
+.super-box:hover .box::after {
+  opacity: 1;
+}
+
+.dr {
+  position: absolute;
+  bottom: 16px; 
+  right: 16px;
+  width:100px;
+}
