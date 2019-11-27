@@ -184,7 +184,7 @@
 }
 
 .box::after {
-  content: "this is the content to add";
+  content: attr(data-content);
   position: absolute;
   opacity: 0;
   font-size: 13px;

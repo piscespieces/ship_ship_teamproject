@@ -85,6 +85,27 @@
       </ul>
   </div>
 
+  <div>
+    <h1>Locations History 2</h1>
+    <% @locations.each do |location| %>
+      <div class="super-box">
+        <div class="container">
+          <div class="box" data-content="<%= @keys.map{ |k| location[k] }.join(', ') %>">
+            <div class="icon_bg"></div>
+          </div>
+          <div class="icon">
+          </div>
+        </div>
+        <div class="text">
+          <p class="title">
+            Added <%= location.created_at.strftime('%m/%d/%y') %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
 <!----------------------------------->
 
 
