@@ -3,16 +3,45 @@
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  font-family: 'Comfortaa', cursive;
 }
+
 .dashboard-main h1{
   grid-column: 2;
   text-align: center;
 }
 
 .dashboard-account{
+  margin-top: 2rem;
   grid-column-start: 0;
-  grid-row-start: 1;
+  grid-row-start: 2;
   text-align: center;
+}
+
+.dashboard-account-container{
+  width: 250px;
+  text-align: center;
+  margin-left: 0;
+  user-select: none;
+  outline: none;
+  outline-width: 0;
+}
+
+.dashboard-account label{
+  display: inline-block;
+
+  width: 100px;
+  text-align: left;
+}
+
+.dashboard-account input{
+  text-indent: 1rem;
+  position: relative;
+  outline: none;
+  /* user-select: none;
+  outline: none;
+  outline-width: 0; */
+
 }
 
 .dashboard-create{
@@ -20,3 +49,157 @@
   grid-row-start: 1;
   text-align: center;
   }
+/* <!----------------CARD FLIP------------------> */
+.scene{
+  /* width: 200px; */
+  height: 100%; 
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  display: flex;
+  margin-bottom: 8rem;
+  flex-direction: column;
+  /* position: relative; */
+  /* width: 100%; */
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  /* line-height: 260px; */
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card-face-front {
+  /* background: linear-gradient(25deg, #a9b8f7 0%, rgba(224,229,250,1) 100%); */
+  background: #4D5C99;
+}
+
+.card-face-back {
+  background: #FFC7A6;
+  transform: rotateY(180deg);
+}
+
+/* <!-----------------------------------> */
+
+.container {
+  width: 220px;
+  height: 220px;
+  display: flex;
+          justify-content: center;
+          align-items: center;
+}
+
+.box {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: box-shadow ease 1s;
+}
+
+.icon {
+  position: relative;
+  margin-top: 8px;
+  transition: all 0.6s ease;
+  transition-delay: 0.32s;
+  will-change: transform;
+}
+
+.icon_bg {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 1px solid rgba(225, 227, 232, 0.18);
+  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+  transition-delay: 0.32s;
+  will-change: transform;
+}
+
+.super-box:hover .box {
+  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  transition-delay: 0.32s;
+}
+
+.super-box:hover .icon_bg {
+  transform: translateY(-32px) scale(6);
+}
+
+.super-box:hover .icon {
+  transform: translateY(-48px) scale(1.4);
+}
+
+.super-box {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text {
+  position: relative;
+  top: -32px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.4s ease;
+  transition-delay: 0.32s;
+}
+
+.super-box:hover .text {
+  opacity: 0;
+  transform: translateY(-4px) scale(.8);
+  
+}
+
+.box::after {
+  content: attr(data-content);
+  position: absolute;
+  opacity: 0;
+  font-size: 13px;
+  line-height: 20px;
+  transition: all 0.3s ease;
+  transition-delay: 0.32s;
+}
+
+.super-box:hover .box::after {
+  opacity: 1;
+}
+
+.dr {
+  position: absolute;
+  bottom: 16px; 
+  right: 16px;
+  width:100px;
+}

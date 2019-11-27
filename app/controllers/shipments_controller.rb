@@ -23,7 +23,6 @@ class ShipmentsController < ApplicationController
     end
 
     current_user.locations.find_or_create_by(get_params[:to])
-    
     redirect_to "/shipments/#{@shipment[:id]}"
   end
 
@@ -36,6 +35,7 @@ class ShipmentsController < ApplicationController
   end
 
   def show
+
     shipment_id = params[:id]
     @shipment = EasyPost::Shipment.retrieve(shipment_id)
   end 
