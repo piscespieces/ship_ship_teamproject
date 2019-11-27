@@ -108,7 +108,7 @@
           <div class="landing-card-brendan">
             <%= image_tag 'GeralskyBrendan.jpg', :class => "brendan" %>
             <div class="landing-card-name">
-              <h3>Brendan Geralsky</h3>
+              <h3>Brendan Guralsky</h3>
             </div>
           </div>
 
@@ -131,6 +131,40 @@
 
     </div>
     <div class="landing-contact-form">
+    <form
+        action="https://formspree.io/shipshipmia@gmail.com"
+        method="POST"
+      >
+        <div class="form-input">
+          <label for="your-email">Name</label>
+          <input
+            id="contact-name"
+            type="text"
+            name="contact-name"
+            autocomplete="off"
+          >
+        </div>
+        <div class="form-input">
+          <label for="contact-email">Email</label>
+          <input
+            id="contact-email"
+            type="text"
+            name="contact-email"
+            autocomplete="off"
+          >
+        </div><br></br>
+        <div class="form-input">
+          <label for="contact-message">Contact ShipShip</label>
+          <textarea
+            id="contact-message"
+            name="contact-message"
+            cols="50"
+            rows="10"
+          ></textarea>
+        </div>
+        <button type="submit">Send</button>
+        <input type="reset">
+      </form>
     </div>
   </div>
 </section>
