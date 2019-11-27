@@ -3,16 +3,45 @@
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  font-family: 'Comfortaa', cursive;
 }
+
 .dashboard-main h1{
   grid-column: 2;
   text-align: center;
 }
 
 .dashboard-account{
+  margin-top: 2rem;
   grid-column-start: 0;
-  grid-row-start: 1;
+  grid-row-start: 2;
   text-align: center;
+}
+
+.dashboard-account-container{
+  width: 250px;
+  text-align: center;
+  margin-left: 0;
+  user-select: none;
+  outline: none;
+  outline-width: 0;
+}
+
+.dashboard-account label{
+  display: inline-block;
+
+  width: 100px;
+  text-align: left;
+}
+
+.dashboard-account input{
+  text-indent: 1rem;
+  position: relative;
+  outline: none;
+  /* user-select: none;
+  outline: none;
+  outline-width: 0; */
+
 }
 
 .dashboard-create{
@@ -63,10 +92,10 @@
 
 .card-face-front {
   /* background: linear-gradient(25deg, #a9b8f7 0%, rgba(224,229,250,1) 100%); */
-  background: red;
+  background: #4D5C99;
 }
 
 .card-face-back {
-  background: blue;
+  background: #FFC7A6;
   transform: rotateY(180deg);
 }

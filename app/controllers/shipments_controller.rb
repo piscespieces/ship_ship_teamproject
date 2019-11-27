@@ -36,7 +36,7 @@ class ShipmentsController < ApplicationController
   end
 
   def show
-
+    
     shipment_id = params[:id]
     @shipment = EasyPost::Shipment.retrieve(shipment_id)
   end 

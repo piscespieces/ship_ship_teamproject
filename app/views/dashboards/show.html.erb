@@ -28,40 +28,42 @@
   </div>
 
   <div class="dashboard-account">
-  <h2>ACCOUNT INFO</h2>
     <% if user_signed_in? %>
+    <div class="dashboard-account-container">
+    <h2>ACCOUNT INFO</h2>
       <div>
         <%= label_tag("Company:") %>
-        <%= content_tag(:from_company, current_user.profile&.name) %>
+        <%= text_field_tag(:from_name, current_user.profile&.name) %>
       </div>
       <div> 
         <%= label_tag("Phone:") %>
-        <%= content_tag(:from_phone, current_user.profile&.phone) %>
+        <%= text_field_tag(:from_phone, current_user.profile&.phone) %>
       </div>
       <div> 
       <%= label_tag("Street1:") %>
-        <%= content_tag(:from_street1, current_user.primary_location&.street1) %>
+        <%= text_field_tag(:from_street1, current_user.primary_location&.street1) %>
       </div>
       <div> 
         <%= label_tag("Street2:") %>
-        <%= content_tag(:from_street2, current_user.primary_location&.street2) %>
+        <%= text_field_tag(:from_street2, current_user.primary_location&.street2) %>
       </div>
       <div> 
         <%= label_tag("City:") %>
-        <%= content_tag(:from_city, current_user.primary_location&.city) %>
+        <%= text_field_tag(:from_city, current_user.primary_location&.city) %>
       </div>
       <div> 
         <%= label_tag("State:") %>
-        <%= content_tag(:from_state, current_user.primary_location&.state) %>
+        <%= text_field_tag(:from_state, current_user.primary_location&.state) %>
       </div>
       <div> 
         <%= label_tag("Zip:") %>
-        <%= content_tag(:from_zip, current_user.primary_location&.zip) %>
+        <%= text_field_tag(:from_zip, current_user.primary_location&.zip) %>
       </div>
       <div> 
         <%= label_tag("Country:") %>
-        <%= content_tag(:from_country, current_user.primary_location&.country) %>
+        <%= text_field_tag(:from_country, current_user.primary_location&.country) %>
       </div>
+    </div>  
     <% end %> 
   </div>
   
@@ -85,17 +87,18 @@
 
 <div class="scene scene-card">
   <% @locations.each do |location| %>
-    <% @keys.each do |key| %>
+  <% @keys.each do |key| %>
     <% if !location[key].nil? && !location[key].strip.empty? %>
       <div class="card">
         <div class="card-face card-face-front">
-          <p> front of card </p>
+          <p> front </p>
         </div>
-      <div class="card-face card-face-back"> <p> <%= "#{key}: #{location[key]}" %></p>
-    </div>
-  </div>
+        <div class="card-face card-face-back"> 
+          <p> <%= "#{key}: #{location[key]}" %></p>
+        </div>    
+</div>
     <% end %>
-    <% end %>
+  <% end %>
   <% end %>
 </main>
 
