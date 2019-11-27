@@ -64,6 +64,7 @@
       </div>
     <% end %> 
   </div>
+  
   <div>
       <h2>Address History</h2>
       <ul>
@@ -79,7 +80,22 @@
         </li>
         <% end %>
       </ul>
-
   </div>
 
+
+<div class="scene scene-card">
+  <% @locations.each do |location| %>
+    <% @keys.each do |key| %>
+    <% if !location[key].nil? && !location[key].strip.empty? %>
+      <div class="card">
+        <div class="card-face card-face-front">
+          <p> front of card </p>
+        </div>
+      <div class="card-face card-face-back"> <p> <%= "#{key}: #{location[key]}" %></p>
+    </div>
+  </div>
+    <% end %>
+    <% end %>
+  <% end %>
 </main>
+
