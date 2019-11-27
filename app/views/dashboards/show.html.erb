@@ -3,7 +3,7 @@
   <h1>Dashboard</h1>
 
 <nav class="devise-dropdown">
-  <button onclick="handleDropdown()" class="devise-dropbtn"></button>
+  <button id="devise-drop" class="devise-dropbtn"></button>
   <div id="devise-myDropdown" class="devise-dropdown-content">
     <% if user_signed_in? %>
       Logged in as: <strong><%= current_user.email %></strong>

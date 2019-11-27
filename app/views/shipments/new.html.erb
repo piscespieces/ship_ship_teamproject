@@ -1,5 +1,5 @@
 
-<%= form_with(url: "/shipments", method: "post") do %>
+<%= form_with(url: shipments_path) do %>
 <div class="shipment-form-group-container">
   <div class="shipment-to-address">
   <h1 class="shipment-to-h1">To: </h1>
@@ -86,7 +86,7 @@
 
       </div>
     <% end %>
-    <%= submit_tag('Submit!') %>
+    <%= submit_tag('Submit!', data: { disable_with: "Processing..." }) %>
   </div>
 </div>
 
