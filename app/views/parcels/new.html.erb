@@ -1,8 +1,5 @@
 <div>
-<a href="/">Home</a>
-<% if user_signed_in? %>
-  <a href="/dashboard">Dashboard</a>
-<% end %>
+<%= render "shared/nav_dropdown" %>
 </div>
 <div class="new-shipment-background">
   <div id="new-shipment-cube"><p class="new-shipment-title">BUILD</p></div>
