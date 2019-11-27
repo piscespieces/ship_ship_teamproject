@@ -38,10 +38,10 @@
   position: relative;
   top: 10vh;
   border: none; 
-  background: #A9B8F7;
+  background:none;  
   color: white;
   font-size: 55px;
-  margin-left: 1vw;
+  left: 6.5vw;
   cursor: pointer;
 }
 
@@ -66,6 +66,15 @@
   color: white;
   font-weight: bolder;
   
+}
+.signup-login-link{
+  position: relative;
+  text-decoration: none;
+  top:31vh;
+  right:3.5vw;
+  font-size:50px;
+  color:white;
+  /* background:#A9B8F7; */
 }
 /* .signup-ship1{
   position: absolute;
