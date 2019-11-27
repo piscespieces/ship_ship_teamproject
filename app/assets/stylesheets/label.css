@@ -1,0 +1,58 @@
+#label-main {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.label-navbar-grid {
+   display: grid;
+   width: 100vw;
+   height: 15vh;
+   grid-template-columns: 1fr 1fr;
+}
+
+.label-navbar-leftgrid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.label-navbar-leftgrid h1 {
+   margin: 0;
+   color: #4D5C99;
+}
+
+.label-navbar-rightgrid {
+   background: #E0E5FA;
+}
+
+.label-leftside {
+   width: 50vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   padding-top: 5vh;
+}
+
+.label-rightside {
+   width: 50vw;
+   height: 100%;
+   background: #E0E5FA;
+}
+
+#label-postagelabel {
+   width: 50%;
+   height: 70%;
+}
+
+.label-ul {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 75vh;
+   justify-content: space-evenly;
+}
+
