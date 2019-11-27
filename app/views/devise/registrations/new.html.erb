@@ -1,9 +1,8 @@
-<div class="signup-background"
-  <h2>Sign up</h2>
+<div class="signup-background">
+<h1 class="signup-header">SIGN UP</h1>
   <div class="signup-container ">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-
       <div class="signup-field">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -21,13 +20,13 @@
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
-
-      <div class="signup-actions">
-      <%= image_tag("loginboxes.png", id: "sign") %>
-        <%= f.submit "Sign up", class:"signup-submit" %>
-      </div>
-    <% end %>
   </div>
+    <div class="signup-actions">
+      <%= image_tag("loginboxes.png", id:"signup-packages") %>
+        <%= f.submit "SUBMIT", class:"signup-submit" %>
+      <%= link_to "LOGIN", "/users/sign_in", class:"signup-login-link" %>
+        <% end %>
+    </div>
 </div>
   # <%= render "devise/shared/links" %>
  

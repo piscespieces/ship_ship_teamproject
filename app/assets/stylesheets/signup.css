@@ -1,44 +1,95 @@
 .signup-background{
-  position:fixed;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   font-family: 'Comfortaa', cursive;
-  background:linear-gradient(
+  background: linear-gradient(
     to bottom,
     #A9B8F7 0%,
     #A9B8F7 50%,
     rgba(224,229,250,1) 50%,
-    white 100%
-  );
+    white 100%)
 }
+
 .signup-container{
   display: grid;
-  justify-content: center;
-  margin-top: 8vh;
+  margin-right: 1vw;
 }
+
 .signup-field{
   /* padding: 10px; */
   display: grid;
-  justify-content:center;
-  align-content: center;
+  margin-top: 1vh;
+  margin-left: 20px;
 }
+
 .signup-field input{
   outline: 0;
   border-width: 0 0 1px;
   border-color: black;
-  width:300px;
-  height:30px;
-  margin-top:20px;
-  text-indent:0.5rem;
-  font-size:15px;
-}
-.signup-submit{
-justify-content: center;
-border:none;
-background:none;
-color:white;
-font-size:30px;
-position: relative;
-margin-top:10vh;
+  width: 225px;
+  height: 20px;
+  margin-top: 20px;
+  text-indent: 0.5rem;
+  font-size: 15px;
 }
 
+.signup-submit {
+  position: relative;
+  top: 10vh;
+  border: none; 
+  background:none;  
+  color: white;
+  font-size: 55px;
+  left: 6.5vw;
+  cursor: pointer;
+}
+
+.signup-actions{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+#signup-packages{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-left: 2vw;
+}
+
+.signup-header{
+  position: absolute;
+  top: 5vh;
+  left: 38vw;
+  font-size: 80px;
+  color: white;
+  font-weight: bolder;
+  
+}
+.signup-login-link{
+  position: relative;
+  text-decoration: none;
+  top:31vh;
+  right:3.5vw;
+  font-size:50px;
+  color:white;
+  /* background:#A9B8F7; */
+}
+/* .signup-ship1{
+  position: absolute;
+  top: 55vh;
+  left: 49.5vw;  
+  font-size: 55px;
+  color: white;
+  transform: skewY(0.5deg);
+}
+
+.signup-ship2{
+  position: absolute;
+  top: 71.5vh;
+  left: 61.5vw;  
+  font-size: 55px;
+  color: white;
+  transform: skewY(0.5deg);  
+} */
