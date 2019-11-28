@@ -37,6 +37,7 @@ p.notice, p.alert {
   align-items: center;
   justify-content: space-evenly;
   font-weight: 800;
+  font-size: 1rem;
 }
 
 .landing-sidebar-options li a {
@@ -57,9 +58,11 @@ p.notice, p.alert {
 
 .landing-ship-it a {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.4rem;
   text-decoration: none;
   font-weight: 800;
+  color: #FFC7A6;
+  text-shadow: -1px 0 #273438, 0 1px #273438, 1px 0 #273438, 0 -1px #273438;
 }
 
 .landing-hero-container {

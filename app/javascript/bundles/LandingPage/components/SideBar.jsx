@@ -12,7 +12,7 @@ const SideBar = () => {
                <li><a href="/dashboard">Dashboard</a></li>
             </ul>
             <div className="landing-ship-it">
-               <h1><a href="/parcels/new">SHIP IT!</a></h1>
+               <h1 id="sidebar-shipit"><a href="/parcels/new">SHIP IT!</a></h1>
             </div>
          </div>
       </animated.div>
