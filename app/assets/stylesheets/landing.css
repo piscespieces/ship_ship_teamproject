@@ -179,6 +179,7 @@ p.notice, p.alert {
 }
 
 .landing-contact-header {
+  width: 80vw;
   height: 15vh;
   display: flex;
   justify-content: center;
@@ -188,38 +189,50 @@ p.notice, p.alert {
 
 .landing-team-pics-container {
   width: 80vw;
-  height: 35vh;
+  height: 50vh;
 }
 
 .landing-pics-cards {
   width: 80vw;
-  height: 35vh;
+  height: 50vh;
   display: grid;
-  grid-template-columns: repeat(4, minmax(20vw, 1fr))
+  grid-template-columns: 1fr 1fr 1fr
 }
 
-.eric, .brendan, .andres, .daniel {
-  width: 100%;
-  height: 36vh;
+.landing-card-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.eric, .brendan, .andres {
+  width: 20vw;
+  border-radius: 50%
 }
 
 .landing-card-name h3 {
-  margin: 0;
+  margin-top: 1rem;
 }
 
 /* CONTACT FORM */
-.landing-contact-form{
-  display:grid;
+.landing-contact-form {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
   justify-content: center;
-  margin-top:10vh;
-}
-.landing-contact-form .form-input{
-  display: grid;
-  grid-template-rows: 1fr;
-  justify-content: space-around;
-}
-.form-input label{
-  font-size:18px;
+  align-items: center;
 }
 
+.form-input:nth-child(1), .form-input:nth-child(2) {
+  margin-bottom: 1.5rem;
+}
+
+.form-input input, .form-input textarea {
+  width: 100%;
+}
+
+.landing-contact-buttons {
+
+}
 

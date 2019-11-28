@@ -2,6 +2,7 @@ import React from 'react'
 import SideBar from './SideBar'
 import Hero from './Hero'
 import Info from './Info'
+import Contact from './Contact'
 
 const LandingPage = () => {
    return (
@@ -9,6 +10,7 @@ const LandingPage = () => {
          <SideBar />
          <Hero />
          <Info />
+         <Contact />
       </>
    )
 }
