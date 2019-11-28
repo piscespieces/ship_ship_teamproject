@@ -1,4 +1,5 @@
 import React from 'react'
+import TypeWritter from './TypeWritter'
 import logo from '../../../../assets/images/shipship_logo_2';
 
 const Hero = () => {
@@ -10,9 +11,7 @@ const Hero = () => {
          <div className="landing-logo-container">
             <div className="landing-left-logo-side">
                <div className="landing-p-container">
-                  <p>
-                     Let us help you find the best shipping options for any and all needs...
-                  </p>
+                  <TypeWritter />
                </div>
             </div>
             <div className="landing-center-logo">
