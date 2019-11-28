@@ -53,6 +53,7 @@ const Contact = () => {
                         type="text"
                         name="contact-name"
                         autoComplete="off"
+                        placeholder="John Doe"
                      />
                   </div>
 
@@ -63,6 +64,7 @@ const Contact = () => {
                         type="text"
                         name="contact-email"
                         autoComplete="off"
+                        placeholder="john@example.com"
                      />
                   </div>
 

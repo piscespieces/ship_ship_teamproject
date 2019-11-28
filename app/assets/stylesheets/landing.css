@@ -4,6 +4,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Comfortaa', cursive;
+  color: #273438;
+  line-height: 1.5;
+  font-size: 0.94rem;
 }
 
 p.notice, p.alert {
@@ -33,6 +36,17 @@ p.notice, p.alert {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  font-weight: 800;
+}
+
+.landing-sidebar-options li a {
+  text-decoration: none;
+  color: #273438;
+  transition: ease-in-out .2s;
+}
+
+.landing-sidebar-options li a:hover {
+  color: #f5f8f8;
 }
 
 .landing-ship-it {
@@ -81,7 +95,6 @@ p.notice, p.alert {
 #landing-logo {
   width: 40vw;
   height: 60vh;
-  background: papayawhip;
 }
 
 .landing-logo-imgtag {
@@ -224,11 +237,21 @@ p.notice, p.alert {
   align-items: center;
 }
 
+.landing-contact-form form {
+  width: 35vw;
+}
+
 .form-input:nth-child(1), .form-input:nth-child(2) {
   margin-bottom: 1.5rem;
 }
 
 .form-input input, .form-input textarea {
   width: 100%;
+  padding: 0.45rem 0.75rem;
+  box-sizing: border-box;
+  font-size: 0.94rem;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #b7b6b9;
 }
-
