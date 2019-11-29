@@ -1,59 +1,62 @@
 import React from 'react'
+import { Element } from 'react-scroll'
 
 const Info = () => {
    return (
       <>
-         <section>
-            <div className="landing-info-container">
-               <div className="landing-info-header">
-                  <h1>How we work...</h1>
+         <Element name="landing-scroll-howwework" className="element" >
+            <section>
+               <div className="landing-info-container">
+                  <div className="landing-info-header">
+                     <h1>How we work...</h1>
+                  </div>
+
+                  {/* INFO SECTION */}
+
+                  <div className="landing-cards-container">
+
+                     {/* CARD 1 */}
+
+                     <div className="landing-card">
+                        <div className="landing-card-header">
+                           <p>Build your packages</p>
+                        </div>
+                        <div className="landing-card-logo">
+                        </div>
+                        <p className="landing-card-footer">
+                           this is just a placeholder, we gotta add some information about how to actually build the packages...
+                     </p>
+                     </div>
+
+                     {/* CARD 2 */}
+
+                     <div className="landing-card">
+                        <div className="landing-card-header">
+                           <p>Give us your info</p>
+                        </div>
+                        <div className="landing-card-logo">
+                        </div>
+                        <p className="landing-card-footer">
+                           this is just a placeholder, we gotta add some information about how to actually build the packages...
+                     </p>
+                     </div>
+
+                     {/* CARD 3 */}
+
+                     <div className="landing-card">
+                        <div className="landing-card-header">
+                           <p>Compare prices!</p>
+                        </div>
+                        <div className="landing-card-logo">
+                        </div>
+                        <p className="landing-card-footer">
+                           this is just a placeholder, we gotta add some information about how to actually build the packages...
+                     </p>
+                     </div>
+                  </div>
                </div>
-
-               {/* INFO SECTION */}
-
-               <div className="landing-cards-container">
-
-                  {/* CARD 1 */}
-
-                  <div className="landing-card">
-                     <div className="landing-card-header">
-                        <p>Build your packages</p>
-                     </div>
-                     <div className="landing-card-logo">
-                     </div>
-                     <p className="landing-card-footer">
-                        this is just a placeholder, we gotta add some information about how to actually build the packages...
-                     </p>
-                  </div>
-
-                  {/* CARD 2 */}
-
-                  <div className="landing-card">
-                     <div className="landing-card-header">
-                        <p>Give us your info</p>
-                     </div>
-                     <div className="landing-card-logo">
-                     </div>
-                     <p className="landing-card-footer">
-                        this is just a placeholder, we gotta add some information about how to actually build the packages...
-                     </p>
-                  </div>
-
-                  {/* CARD 3 */}
-
-                  <div className="landing-card">
-                     <div className="landing-card-header">
-                        <p>Compare prices!</p>
-                     </div>
-                     <div className="landing-card-logo">
-                     </div>
-                     <p className="landing-card-footer">
-                        this is just a placeholder, we gotta add some information about how to actually build the packages...
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </section>
+            </section>
+         </Element>
       </>
    )
 }
