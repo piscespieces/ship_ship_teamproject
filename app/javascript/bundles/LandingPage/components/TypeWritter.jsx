@@ -3,7 +3,7 @@ import Typist from 'react-typist';
 
 const TypeWritter = () => {
    return (
-      <Typist>
+      <Typist cursor={{ hideWhenDone: true }}>
          <Typist.Delay ms={200} />
          Let us find you < br /> the BEST < br /> shipping options...<br />
          <Typist.Delay ms={500} />for any
