@@ -22,7 +22,7 @@ p.notice, p.alert {
   width: 20vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   background: linear-gradient(25deg, #A9B8F7 0%, rgba(224,229,250,1) 100%);
   position: fixed;
   right: 0px;
@@ -54,7 +54,7 @@ p.notice, p.alert {
 .landing-ship-it {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 .landing-ship-it a {
@@ -122,6 +122,10 @@ p.notice, p.alert {
 
 .landing-p-container p {
   margin: 0;
+}
+
+.Typist {
+  text-align: center;
 }
 
 #landing-hooray {
