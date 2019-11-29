@@ -41,6 +41,7 @@ p.notice, p.alert {
 }
 
 .landing-sidebar-options li a {
+  cursor: pointer;
   text-decoration: none;
   color: #273438;
   transition: ease-in-out .2s;
