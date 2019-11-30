@@ -2,6 +2,7 @@ import React from 'react'
 import CarriersTable from './CarriersTable'
 import Label from './Label'
 import axios from 'axios'
+<div> <%= render "shared/nav_dropdown" %> </div>
 
 export default class Carriers extends React.Component {
     constructor(props) {

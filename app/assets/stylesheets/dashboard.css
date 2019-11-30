@@ -49,58 +49,10 @@
   grid-row-start: 1;
   text-align: center;
   }
-/* <!----------------CARD FLIP------------------> */
-.scene{
-  /* width: 200px; */
-  height: 100%; 
-  margin-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #CCC;
-  margin: 40px 0;
-  perspective: 600px;
-}
 
-.card {
-  display: flex;
-  margin-bottom: 8rem;
-  flex-direction: column;
-  /* position: relative; */
-  /* width: 100%; */
-  height: 100%;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transform-origin: center right;
-  transition: transform 1s;
+.dashboard-location-container{
+  overflow: auto;
 }
-
-.card.is-flipped {
-  transform: translateX(-100%) rotateY(180deg);
-}
-
-.card-face {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  /* line-height: 260px; */
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 40px;
-  backface-visibility: hidden;
-}
-
-.card-face-front {
-  /* background: linear-gradient(25deg, #a9b8f7 0%, rgba(224,229,250,1) 100%); */
-  background: #4D5C99;
-}
-
-.card-face-back {
-  background: #FFC7A6;
-  transform: rotateY(180deg);
-}
-
-/* <!-----------------------------------> */
 
 .container {
   width: 220px;
@@ -160,6 +112,7 @@
 }
 
 .super-box {
+  position: relative;
   width: 220px;
   height: 220px;
   display: flex;
@@ -180,7 +133,6 @@
 .super-box:hover .text {
   opacity: 0;
   transform: translateY(-4px) scale(.8);
-  
 }
 
 .box::after {
