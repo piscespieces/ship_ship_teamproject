@@ -60,9 +60,9 @@ function enableCube(){
     let scene = new THREE.Scene();
 
     // cube
-    cube = new THREE.Mesh(new THREE.CubeGeometry(4, 4, 4),
+    cube = new THREE.Mesh(new THREE.CubeGeometry(5, 2, 5),
     new THREE.MeshLambertMaterial({
-        color:'#e6f8ff' 
+        color:'#FFC7A6' 
     })
     );
     cube.overdraw = true;
@@ -71,7 +71,7 @@ function enableCube(){
     scene.add(cube);
 
     // add subtle ambient lighting
-    let ambientLight = new THREE.AmbientLight(0x444444);
+    let ambientLight = new THREE.AmbientLight(0x777777);
     scene.add(ambientLight);
 
     // directional lighting
