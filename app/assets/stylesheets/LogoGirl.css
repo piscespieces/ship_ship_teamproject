@@ -1,22 +1,32 @@
+svg {
+   width: 100%;
+   height: 100%;
+}
+
+.landing-logogirl-container {
+   width: 100%;
+   height: 200px;
+}
+
 #pencil{
    animation-name: pen-move;
    animation-duration: 5s;
    transform-origin: top;
-   animation-iteration-count: 3;
+   animation-iteration-count: infinite;
  }
-​
+
 #girl{
  animation-name: girl-move;
  animation-duration: 5s;
- animation-iteration-count: 3;
+ animation-iteration-count: infinite;
 }
-​
+
  @keyframes girl-move{
    0% { transform:translateX(0px); }
  50% { transform: translateX(-150px); }
  100% { transform:translateX(0px); }
 }
-​
+
 @keyframes pen-move{
  /* 15% { transform: rotateY(45deg); } */
  /* 50% { transform: translateX(-100px); } */
@@ -24,6 +34,6 @@
  0% { transform:translateX(0px); }
  50% { transform: translateX(-150px); }
  75% { transform: rotatey(35deg); }
-​
+
  100% { transform:translateX(0px); }
 }
