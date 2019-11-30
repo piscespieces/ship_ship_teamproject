@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Comfortaa', cursive;
+  color: #273438;
+  line-height: 1.5;
+  font-size: 0.94rem;
 }
 
 p.notice, p.alert {
@@ -16,8 +22,8 @@ p.notice, p.alert {
   width: 20vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  background: #E0E5FA;
+  grid-template-rows: 1fr 1fr;
+  background: linear-gradient(25deg, #A9B8F7 0%, rgba(224,229,250,1) 100%);
   position: fixed;
   right: 0px;
 }
@@ -30,19 +36,34 @@ p.notice, p.alert {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.landing-sidebar-options li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #273438;
+  transition: ease-in-out .2s;
+}
+
+.landing-sidebar-options li a:hover {
+  color: #f5f8f8;
 }
 
 .landing-ship-it {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 .landing-ship-it a {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.9rem;
   text-decoration: none;
   font-weight: 800;
+  color: #FFC7A6;
+  text-shadow: -1px 0 #273438, 0 1px #273438, 1px 0 #273438, 0 -1px #273438;
 }
 
 .landing-hero-container {
@@ -60,7 +81,7 @@ p.notice, p.alert {
 
 .landing-hero-header h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .landing-logo-container {
@@ -78,7 +99,11 @@ p.notice, p.alert {
 #landing-logo {
   width: 40vw;
   height: 60vh;
-  background: papayawhip;
+}
+
+.landing-logo-imgtag {
+  width: 100%;
+  height: 100%;
 }
 
 .landing-left-logo-side {
@@ -99,6 +124,11 @@ p.notice, p.alert {
   margin: 0;
 }
 
+.Typist {
+  text-align: center;
+  font-size: 2rem;
+}
+
 #landing-hooray {
   display: flex;
   justify-content: center;
@@ -110,7 +140,7 @@ p.notice, p.alert {
 
 .landing-info-container {
   width: 80vw;
-  height: 80vh;
+  height: 100vh;
   background: #F5F8F8;
 }
 
@@ -119,10 +149,11 @@ p.notice, p.alert {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5vh;
 }
 
 .landing-info-header h1 {
-  margin: 0;
+  margin: 5vh 0 0 0;
   font-size: 2rem;
 }
 
@@ -130,18 +161,24 @@ p.notice, p.alert {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 80vw;
-  height: 65vh;
+  height: 75vh;
 }
 
 .landing-card {
   width: 100%;
-  height: 60vh;
+  height: 100%;
 }
 
-.landing-card-header, .landing-card-footer {
+.landing-card-header {
   width: 70%;
-  height: 10vh;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.landing-card-footer {
+  margin: 10vh auto 0 auto;
+  width: 70%;
   display: flex;
   align-items: center;
 }
@@ -155,11 +192,13 @@ p.notice, p.alert {
 
 .landing-card-logo {
   width: 90%;
-  height: 30vh;
-  background: papayawhip;
-  margin: 2.5vh auto;
+  margin: 5vh auto;
 }
 
+.landing-card-logo img {
+  width: 100%;
+  height: 200px;
+}
 /* CONTACT PAGE */
 
 .landing-contact-container {
@@ -171,6 +210,7 @@ p.notice, p.alert {
 }
 
 .landing-contact-header {
+  width: 80vw;
   height: 15vh;
   display: flex;
   justify-content: center;
@@ -180,38 +220,56 @@ p.notice, p.alert {
 
 .landing-team-pics-container {
   width: 80vw;
-  height: 35vh;
+  height: 50vh;
 }
 
 .landing-pics-cards {
   width: 80vw;
-  height: 35vh;
+  height: 50vh;
   display: grid;
-  grid-template-columns: repeat(4, minmax(20vw, 1fr))
+  grid-template-columns: 1fr 1fr 1fr
 }
 
-.eric, .brendan, .andres, .daniel {
-  width: 100%;
-  height: 36vh;
+.landing-card-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.eric, .brendan, .andres {
+  width: 20vw;
+  border-radius: 50%
 }
 
 .landing-card-name h3 {
-  margin: 0;
+  margin-top: 1rem;
 }
 
 /* CONTACT FORM */
-.landing-contact-form{
-  display:grid;
+.landing-contact-form {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
   justify-content: center;
-  margin-top:10vh;
-}
-.landing-contact-form .form-input{
-  display: grid;
-  grid-template-rows: 1fr;
-  justify-content: space-around;
-}
-.form-input label{
-  font-size:18px;
+  align-items: center;
 }
 
+.landing-contact-form form {
+  width: 35vw;
+}
 
+.form-input:nth-child(1), .form-input:nth-child(2) {
+  margin-bottom: 1.5rem;
+}
+
+.form-input input, .form-input textarea {
+  width: 100%;
+  padding: 0.45rem 0.75rem;
+  box-sizing: border-box;
+  font-size: 0.94rem;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #b7b6b9;
+}
