@@ -3,7 +3,7 @@ import React from 'react'
 const LogoMan = () => {
    return (
       <>
-         <svg viewBox="0 0 913 653" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <svg width="913" height="653" viewBox="0 0 913 653" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="svg-carrier-drawing-page">
                <g id="whole-page">
                   <path id="Vector" d="M62.466 216L0 216.856L62.466 242.305V652.404H683.699V216H62.466Z" fill="#3F3D56" />
@@ -54,6 +54,7 @@ const LogoMan = () => {
                </g>
             </g>
          </svg>
+
       </>
    )
 }
