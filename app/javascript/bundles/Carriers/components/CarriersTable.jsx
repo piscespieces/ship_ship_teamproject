@@ -42,15 +42,14 @@ const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSe
                         {selectedService.delivery_days || 0}
                      </td>
                      <td className="carriers-checkbox">
-                        <input
+                        <Checkbox label=''
                            type="checkbox"
                            name="selectedService"
                            checked={
                               finalSelection.carrier === carrierName &&
                               finalSelection.service === selectedServiceName
                            }
-                           onChange={() => handleFinalSelect(carrierName, selectedServiceName, selectedService.id)}
-                        />
+                           onChange={() => handleFinalSelect(carrierName, selectedServiceName, selectedService.id)} />
                      </td>
                   </tr>
                )
