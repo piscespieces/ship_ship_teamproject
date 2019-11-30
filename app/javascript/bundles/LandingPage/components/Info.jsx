@@ -1,5 +1,7 @@
 import React from 'react'
 import { Element } from 'react-scroll'
+import logogirl from '../../../../assets/images/logogirl';
+import logobox from '../../../../assets/images/logobox';
 
 const Info = () => {
    return (
@@ -35,6 +37,7 @@ const Info = () => {
                            <p>Give us your info</p>
                         </div>
                         <div className="landing-card-logo">
+                           <img src={logogirl} alt="logo" />
                         </div>
                         <p className="landing-card-footer">
                            this is just a placeholder, we gotta add some information about how to actually build the packages...
