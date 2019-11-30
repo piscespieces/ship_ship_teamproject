@@ -1,7 +1,8 @@
 import React from 'react'
+import { Checkbox } from 'semantic-ui-react'
 
 const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSelection, handleFinalSelect }) => {
-      return (
+   return (
       <table className="carriers-table">
          <thead className="carriers-tablehead">
             <tr className="carriers-tablehead-tr">
@@ -28,17 +29,17 @@ const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSe
                            {
                               Object.keys(carriers[carrierName]).map(serviceName => (
                                  <option key={serviceName}>
-                                    { serviceName }
+                                    {serviceName}
                                  </option>
                               ))
                            }
                         </select>
                      </td>
                      <td className="carriers-table-rates">
-                        { selectedService.rate }
+                        {selectedService.rate}
                      </td>
                      <td className="carriers-table-rates">
-                        { selectedService.delivery_days || 0 }
+                        {selectedService.delivery_days || 0}
                      </td>
                      <td className="carriers-checkbox">
                         <input
