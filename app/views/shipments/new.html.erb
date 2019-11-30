@@ -44,46 +44,40 @@
     <div class="shipment-from-wrap">
     <div>
       <%= label_tag(:from_street1, "Street1") %>
-      <%= text_field_tag(:from_street1, current_user.primary_location&.street1) %>
+      <%= text_field_tag(:from_street1, current_user&.primary_location&.street1) %>
     </div>
     <div>
       <%= label_tag(:from_street2, "Street2") %>
-      <%= text_field_tag(:from_street2, current_user.primary_location&.street2) %>
+      <%= text_field_tag(:from_street2, current_user&.primary_location&.street2) %>
     </div>
     <div>
       <%= label_tag(:from_city, "City") %>
-      <%= text_field_tag(:from_city, current_user.primary_location&.city) %>
+      <%= text_field_tag(:from_city, current_user&.primary_location&.city) %>
     </div>
     <div>
       <%= label_tag(:from_state, "State") %>
-      <%= text_field_tag(:from_state, current_user.primary_location&.state) %>
+      <%= text_field_tag(:from_state, current_user&.primary_location&.state) %>
     </div>
     <div>
       <%= label_tag(:from_zip, "Zip") %>
-      <%= text_field_tag(:from_zip, current_user.primary_location&.zip) %>
+      <%= text_field_tag(:from_zip, current_user&.primary_location&.zip) %>
     </div>
     <div>
       <%= label_tag(:from_country, "Country") %>
-      <%= text_field_tag(:from_country, current_user.primary_location&.country) %>
+      <%= text_field_tag(:from_country, current_user&.primary_location&.country) %>
     </div>
     <div>
       <%= label_tag(:from_company, "Company") %>
-      <% if user_signed_in? %>
-        <%= text_field_tag(:from_company, current_user.profile&.name) %>
-      <% end%>
+      <%= text_field_tag(:from_company, current_user&.profile&.name) %>
     </div>
     <div>
       <%= label_tag(:from_phone, "Phone") %>
-      <% if user_signed_in? %>
-        <%= text_field_tag(:from_phone, current_user.profile&.phone) %>
-      <% end%>
+      <%= text_field_tag(:from_phone, current_user&.profile&.phone) %>
     </div>
     <% if user_signed_in? %>
       <div>
           <%= label_tag :save %>
           <%= select_tag :save, options_for_select(["No", "Yes", "Save as Primary Location"]) %>
-          
-
       </div>
     <% end %>
     <%= submit_tag('Submit!', data: { disable_with: "Processing..." }) %>
