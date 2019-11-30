@@ -1,9 +1,8 @@
 import React from 'react'
 import { Element } from 'react-scroll'
-// import logobox from '../../../../assets/images/logobox'
-import logogirl from '../../../../assets/images/logogirl'
-import comparelogo from '../../../../assets/images/comparelogo'
-import LogoGirl from './LogoGirl'
+import LogoGirl from './LandingLogos/LogoGirl'
+import LogoMan from './LandingLogos/LogoMan'
+import LogoBox from './LandingLogos/LogoBox'
 
 const Info = () => {
    return (
@@ -26,6 +25,9 @@ const Info = () => {
                            <p>Build your packages</p>
                         </div>
                         <div className="landing-card-logo">
+                           <div className="landing-logogirl-container">
+                              <LogoBox />
+                           </div>
                         </div>
                         <p className="landing-card-footer">
                            this is just a placeholder, we gotta add some information about how to actually build the packages...
@@ -55,11 +57,13 @@ const Info = () => {
                            <p>Compare prices!</p>
                         </div>
                         <div className="landing-card-logo">
-                           <img src={comparelogo} alt="" />
+                           <div className="landing-logogirl-container">
+                              <LogoMan />
+                           </div>
                         </div>
                         <p className="landing-card-footer">
                            this is just a placeholder, we gotta add some information about how to actually build the packages...
-                     </p>
+                        </p>
                      </div>
                   </div>
                </div>
