@@ -6,6 +6,11 @@ import { faShippingFast } from '@fortawesome/free-solid-svg-icons'
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons'
 import { faTruckLoading } from '@fortawesome/free-solid-svg-icons'
 import { faBoxOpen } from '@fortawesome/free-solid-svg-icons'
+import usps from '../../../../assets/images/usps'
+import fedex from '../../../../assets/images/fedex'
+import ups from '../../../../assets/images/ups'
+
+const CARRIER_IMAGE_MAP = { USPS: usps, FedEx: fedex, UPS: ups }
 
 const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSelection, handleFinalSelect }) => {
    return (
@@ -47,13 +52,13 @@ const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSe
          <tbody>
             {Object.keys(carriers).map(carrierName => {
                const selectedService = carriers[carrierName][selectedServices[carrierName]]
-               const selectedServiceName = Object.keys(carriers[carrierName]).find(serviceName => (
-                  serviceName === selectedServices[carrierName]
-               ))
+               const selectedServiceName = selectedServices[carrierName]
                return (
                   <tr key={carrierName}>
                      <td className="carriers-table-carrier">
-                        {carrierName}
+                        <div className="logo-img-container">
+                           <img className={carrierName} src={CARRIER_IMAGE_MAP[carrierName]} alt="carrier" />
+                        </div>
                      </td>
                      <td className="carriers-table-select-cell">
                         <select id="carriers-select" onChange={handleOptionChange(carrierName)}>

@@ -48,8 +48,31 @@
 }
 
 .carriers-table-carrier {
+  background: gray;
   text-align: center;
 }
+
+.logo-img-container {
+  width: 20vw;
+  height: 20vh;
+}
+
+.USPS {
+  width: 20vw;
+  height: 20vh;
+}
+
+.FedEx {
+  width: 10vw;
+  height: 10vh;
+}
+
+.UPS {
+  width: 10vw;
+  height: 10vh;
+}
+
+
 
 .carriers-table-select-cell {
   text-align: center;
