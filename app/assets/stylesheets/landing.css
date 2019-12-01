@@ -141,7 +141,7 @@ p.notice, p.alert {
 .landing-info-container {
   width: 80vw;
   height: 100vh;
-  background: #F5F8F8;
+  background: #E6F8FF;
 }
 
 .landing-info-header {
@@ -226,7 +226,7 @@ text-shadow: -1px 0 #FFC7A6, 0 1px #FFC7A6, 1px 0 #FFC7A6, 0 -1px #FFC7A6;
 
 .landing-team-pics-container {
   width: 80vw;
-  height: 50vh;
+  height: 30vh;
 }
 
 .landing-pics-cards {
@@ -255,7 +255,7 @@ text-shadow: -1px 0 #FFC7A6, 0 1px #FFC7A6, 1px 0 #FFC7A6, 0 -1px #FFC7A6;
 /* CONTACT FORM */
 .landing-contact-form {
   width: 80vw;
-  height: 50vh;
+  height: 55vh;
   display: flex;
   justify-content: center;
   align-items: center;
