@@ -16,16 +16,21 @@
     color: #4D5C99;
 }
 
+.carriers-header-header h1 {
+  font-size: 2rem;
+}
+
 .carriers-tablehead {
   align-items: center;
   background: #E0E5FA;
 }
 
 .carriers-tablehead-tr {
-  height: 5vh;
+  height: 10vh;
 }
 
 .carriers-tablehead-th {
+  font-size: 1.2rem;
   width: 20vw;
   color: #FFC7A6;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -69,13 +74,17 @@
   height: 20vh;
 }
 
+.carriers-icon {
+  color: black;
+}
+
 #carriers-select {
   display: inline-block;
   width: 100%;
   cursor: pointer;
   padding: 10px 15px;
   outline: 0;
-  border: 0;
+  border: 1px solid rgba(39, 51, 56, 0.5);
   border-radius: 0;
   appearance: none;
 }

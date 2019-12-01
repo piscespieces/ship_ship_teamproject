@@ -1,16 +1,47 @@
 import React from 'react'
 import { Checkbox } from 'semantic-ui-react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTruck } from '@fortawesome/free-solid-svg-icons'
+import { faShippingFast } from '@fortawesome/free-solid-svg-icons'
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons'
+import { faTruckLoading } from '@fortawesome/free-solid-svg-icons'
+import { faBoxOpen } from '@fortawesome/free-solid-svg-icons'
 
 const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSelection, handleFinalSelect }) => {
    return (
       <table className="carriers-table">
          <thead className="carriers-tablehead">
             <tr className="carriers-tablehead-tr">
-               <th className="carriers-tablehead-th">Carrier</th>
-               <th className="carriers-tablehead-th">Service</th>
-               <th className="carriers-tablehead-th">Rate</th>
-               <th className="carriers-tablehead-th">Days</th>
-               <th className="carriers-tablehead-th">Placeholder</th>
+               <th className="carriers-tablehead-th">
+                  Carrier &nbsp;
+                  <span className="carriers-icon">
+                     <FontAwesomeIcon icon={faTruck} />
+                  </span>
+               </th>
+               <th className="carriers-tablehead-th">
+                  Service &nbsp;
+                  <span className="carriers-icon">
+                     <FontAwesomeIcon icon={faShippingFast} />
+                  </span>
+               </th>
+               <th className="carriers-tablehead-th">
+                  Rate &nbsp;
+                  <span className="carriers-icon">
+                     <FontAwesomeIcon icon={faDollarSign} />
+                  </span>
+               </th>
+               <th className="carriers-tablehead-th">
+                  Days &nbsp;
+                  <span className="carriers-icon">
+                     <FontAwesomeIcon icon={faTruckLoading} />
+                  </span>
+               </th>
+               <th className="carriers-tablehead-th">
+                  Selection &nbsp;
+                  <span className="carriers-icon">
+                     <FontAwesomeIcon icon={faBoxOpen} />
+                  </span>
+               </th>
             </tr>
          </thead>
          <tbody>
