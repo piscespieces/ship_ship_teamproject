@@ -93,3 +93,18 @@
   color: black;
   background: lightgray;
 }
+
+.ui.checkbox label:before {
+  width: 2rem;
+  height: 2rem;
+  background: #E0E5FA;
+}
+
+.ui.checkbox input:checked~label:after {
+  content: '\e800';
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+}
