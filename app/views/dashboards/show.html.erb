@@ -65,9 +65,11 @@
         </div>
         <div class="text">
           <p class="title">
-            Created: <%= location.created_at.strftime('%m/%d/%y') %>
+            Created: <%= location[:created_at].strftime('%m/%d/%y') %>
           </p>
         </div>
+        <p>label </p>
+        <%= image_tag location[:shipment_label][:label_url] %>
       </div>
     <% end %>
   </div>

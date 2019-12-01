@@ -45,6 +45,7 @@ export default class Carriers extends React.Component {
     render() {
         const { carriers, selectedServices, finalSelection } = this.state
         const trackingCode = this.props.shipment.tracking_code
+        console.log('props', this.props)
         // const postageLabel = this.props.shipment.postage_label.label_url
         if (trackingCode) {
             return (
