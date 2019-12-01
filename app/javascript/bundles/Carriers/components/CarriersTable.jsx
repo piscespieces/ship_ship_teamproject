@@ -25,7 +25,7 @@ const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSe
                         {carrierName}
                      </td>
                      <td className="carriers-table-select-cell">
-                        <select onChange={handleOptionChange(carrierName)}>
+                        <select id="carriers-select" onChange={handleOptionChange(carrierName)}>
                            {
                               Object.keys(carriers[carrierName]).map(serviceName => (
                                  <option key={serviceName}>
