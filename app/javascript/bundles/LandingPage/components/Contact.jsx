@@ -28,7 +28,7 @@ const Contact = () => {
                   <div className="landing-card-member">
                      <img src={brendan} className="brendan" />
                      <div className="landing-card-name">
-                        <h3>Brendan Geralsky</h3>
+                        <h3>Brendan Guralsky</h3>
                      </div>
                   </div>
 

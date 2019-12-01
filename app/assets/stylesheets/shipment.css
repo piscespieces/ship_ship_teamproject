@@ -86,16 +86,29 @@
 }
 
 .shipment-from-address input[type="submit"]{
-  background-color: #fcdac7;
-  position: absolute;
-  margin-top: 2rem;
-  width:200px;
-  text-align: center;
-  box-shadow: inset 0px 0px 5px 4px #FFC7A6;
-  font-size: 15px;
+  background: #A9B8F7;
+  font-family: 'Comfortaa', cursive;
+  background-image: linear-gradient(to bottom, #A9B8F7, #A9B8F7);
+  border-radius: 13px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-left:45%;  
+  box-shadow: inset 0px 0px 9px 0px #FFC7A6;
+  text-shadow: 1px 1px 3px #FFC7A6;
+  border: solid #FFC7A6 2px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
+  text-align:center;
+  margin-top:2rem;
+  height: 2.5rem;
 }
 
 .shipment-from-address input[type="submit"]:disabled{
-  background-color: red;
+  background: #FFC7A6;
+  border: solid #FFC7A6 1px;
+  border-radius: 20px;
+  text-decoration: none;
 }
