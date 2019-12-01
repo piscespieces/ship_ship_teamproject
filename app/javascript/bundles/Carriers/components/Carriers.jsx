@@ -76,7 +76,7 @@ export default class Carriers extends React.Component {
                     {
                         finalSelection.service &&
                         <>
-                            <p>You selected {finalSelection.carrier}: {finalSelection.service} ({finalSelection.id})</p>
+                            <p>You selected {finalSelection.carrier}: {finalSelection.service}</p>
                             <button onClick={() => this.confirmSelection(finalSelection)}>
                                 Print Label
                             </button>
