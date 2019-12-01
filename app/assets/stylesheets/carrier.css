@@ -63,20 +63,12 @@
   align-items: center;
 }
 
-.USPS {
-}
-
 .FedEx {
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.UPS {
-}
-
-
 
 .carriers-table-select-cell {
   text-align: center;
