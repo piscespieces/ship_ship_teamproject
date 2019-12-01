@@ -67,9 +67,9 @@ const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSe
                         </select>
                      </td>
                      <td className="carriers-table-rates">
-                        {`$${selectedService.rate}`}
+                        <span id="rate">{`$${selectedService.rate}`}</span>
                      </td>
-                     <td className="carriers-table-rates">
+                     <td className="carriers-table-delivery">
                         {selectedService.delivery_days || 0}
                      </td>
                      <td className="carriers-checkbox">

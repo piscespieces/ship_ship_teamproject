@@ -13,7 +13,7 @@
 .carriers-header-header {
     display: flex;
     align-items: center;
-    color: #4D5C99;
+    color: #273338
 }
 
 .carriers-header-header h1 {
@@ -59,10 +59,15 @@
   text-align: center;
 }
 
+/* 
 .carriers-table-rates ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+} */
+
+.carriers-table-delivery {
+  text-align: center;
 }
 
 .carriers-checkbox {
