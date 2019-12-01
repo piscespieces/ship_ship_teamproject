@@ -64,7 +64,7 @@ export default class Carriers extends React.Component {
                         <NavbarLogo />
                     </div>
                     <div className="carriers-header-header">
-                        <h1>SELECT A CARRIER</h1>
+                        <h1>Select A Carrier</h1>
                     </div>
                 </div>
                 <main className="carriers-main">
