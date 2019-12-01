@@ -6,9 +6,9 @@ import { faShippingFast } from '@fortawesome/free-solid-svg-icons'
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons'
 import { faTruckLoading } from '@fortawesome/free-solid-svg-icons'
 import { faBoxOpen } from '@fortawesome/free-solid-svg-icons'
-import usps from '../../../../assets/images/usps'
-import fedex from '../../../../assets/images/fedex'
-import ups from '../../../../assets/images/ups'
+import usps from '../../../../assets/images/uspssvg'
+import fedex from '../../../../assets/images/fedexsvg'
+import ups from '../../../../assets/images/upssvg'
 
 const CARRIER_IMAGE_MAP = { USPS: usps, FedEx: fedex, UPS: ups }
 

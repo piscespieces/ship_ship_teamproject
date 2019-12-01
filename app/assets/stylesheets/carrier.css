@@ -38,7 +38,7 @@
 
 .carriers-main {
   width: 100vw;
-  height: 80vh;
+  height: 95vh;
 }
 
 .carriers-table {
@@ -55,6 +55,9 @@
 .logo-img-container {
   width: 20vw;
   height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .USPS {
@@ -63,13 +66,16 @@
 }
 
 .FedEx {
-  width: 10vw;
-  height: 10vh;
+  width: 20vw;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .UPS {
-  width: 10vw;
-  height: 10vh;
+  width: 20vw;
+  height: 20vh;
 }
 
 
