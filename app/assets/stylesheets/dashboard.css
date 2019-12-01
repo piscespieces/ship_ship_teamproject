@@ -155,3 +155,31 @@
   right: 16px;
   width:100px;
 }
+.dashboard-create a{
+  background: #A9B8F7;
+    font-family: 'Comfortaa', cursive;
+    background-image: -webkit-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: -moz-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: -ms-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: -o-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: linear-gradient(to bottom, #A9B8F7, #A9B8F7);
+    border-radius: 13px;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: .5rem;
+    box-shadow: inset 0px 0px 9px 0px #FFC7A6;
+    text-shadow: 1px 1px 3px #FFC7A6;
+    border: solid #FFC7A6 2px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top:15px;
+    margin-left:80px;
+}
+.dashboard-create a:hover {
+  background: #FFC7A6;
+  border: solid #FFC7A6 1px;
+  border-radius: 20px;
+  text-decoration: none;
+}
