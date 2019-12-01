@@ -206,7 +206,8 @@ p.notice, p.alert {
   grid-template-rows: 1fr 1fr;
   width: 80vw;
   height: 100vh;
-  background: #FFF;
+  background: #fff;
+  background-color:#A9B8F7;
 }
 
 .landing-contact-header {
@@ -216,6 +217,11 @@ p.notice, p.alert {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+}
+
+.landing-contact-header h1{
+color:rgba(224,229,250,1);
+text-shadow: -1px 0 #FFC7A6, 0 1px #FFC7A6, 1px 0 #FFC7A6, 0 -1px #FFC7A6;
 }
 
 .landing-team-pics-container {
@@ -253,6 +259,7 @@ p.notice, p.alert {
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .landing-contact-form form {
@@ -271,5 +278,73 @@ p.notice, p.alert {
   border-radius: 0.25rem;
   box-shadow: none;
   outline: none;
-  border: 1px solid #b7b6b9;
+  border: 2px solid #FFC7A6;
+  background-color:rgba(224,229,250,1);
+}
+
+.landing-contact-buttons{
+  display:grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.landing-contact-buttons button{
+  background: #A9B8F7;
+  font-family: 'Comfortaa', cursive;
+  background-image: -webkit-linear-gradient(top, #A9B8F7, #A9B8F7);
+  background-image: -moz-linear-gradient(top, #A9B8F7, #A9B8F7);
+  background-image: -ms-linear-gradient(top, #A9B8F7, #A9B8F7);
+  background-image: -o-linear-gradient(top, #A9B8F7, #A9B8F7);
+  background-image: linear-gradient(to bottom, #A9B8F7, #A9B8F7);
+  border-radius: 13px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 1rem;
+  box-shadow: inset 0px 0px 9px 0px #FFC7A6;
+  text-shadow: 1px 1px 3px #FFC7A6;
+  border: solid #FFC7A6 2px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  outline:none;
+}
+
+.landing-contact-buttons button:hover{
+  background: #FFC7A6;
+  border: solid #FFC7A6 1px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.landing-contact-buttons input[type="reset"]{
+  background: #A9B8F7;
+  font-family: 'Comfortaa', cursive;
+  background-image: -webkit-linear-gradient(top, #A9B8F7, #A9B8F7);
+  background-image: -moz-linear-gradient(top, #A9B8F7, #A9B8F7);
+  background-image: -ms-linear-gradient(top, #A9B8F7, #A9B8F7);
+  background-image: -o-linear-gradient(top, #A9B8F7, #A9B8F7);
+  background-image: linear-gradient(to bottom, #A9B8F7, #A9B8F7);
+  border-radius: 13px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 1rem;
+  box-shadow: inset 0px 0px 9px 0px #FFC7A6;
+  text-shadow: 1px 1px 3px #FFC7A6;
+  border: solid #FFC7A6 2px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  outline:none;
+}
+.landing-contact-buttons input[type="reset"]:hover{
+  background: #FFC7A6;
+  border: solid #FFC7A6 1px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.contact-color{
+  background-color:#A9B8F7;
 }
