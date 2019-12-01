@@ -15,9 +15,6 @@ const SideBar = () => {
                   <a href="/users/sign_up">SignUp</a>
                </li>
                <li>
-                  <a href="/dashboard">Dashboard</a>
-               </li>
-               <li>
                   <Link
                      activeClass="active"
                      to="home"

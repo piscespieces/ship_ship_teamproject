@@ -38,10 +38,6 @@
   text-indent: 1rem;
   position: relative;
   outline: none;
-  /* user-select: none;
-  outline: none;
-  outline-width: 0; */
-
 }
 
 .dashboard-create{
@@ -58,8 +54,8 @@
   width: 220px;
   height: 220px;
   display: flex;
-          justify-content: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
