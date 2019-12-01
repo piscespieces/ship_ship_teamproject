@@ -69,6 +69,7 @@
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    outline:none;
  }
  .login-submit:hover {
     background: #FFC7A6;
