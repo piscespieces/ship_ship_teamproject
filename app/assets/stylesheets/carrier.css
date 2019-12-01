@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-around;
   width: 100vw;
-  height: 20vh;
+  height: 15vh;
 }
 
 .carriers-header-header {
@@ -29,6 +29,10 @@
   height: 10vh;
 }
 
+.carriers-tr {
+  height: 20vh;
+}
+
 .carriers-tablehead-th {
   font-size: 1.2rem;
   width: 20vw;
@@ -38,12 +42,12 @@
 
 .carriers-main {
   width: 100vw;
-  height: 95vh;
+  /* height: 95vh; */
 }
 
 .carriers-table {
   width: 100vw;
-  height: 90vh;
+  /* height: 90vh; */
   background: white;
 }
 
@@ -53,29 +57,22 @@
 }
 
 .logo-img-container {
-  width: 20vw;
-  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .USPS {
-  width: 20vw;
-  height: 20vh;
 }
 
 .FedEx {
-  width: 20vw;
-  height: 50%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .UPS {
-  width: 20vw;
-  height: 20vh;
 }
 
 
@@ -106,8 +103,13 @@
 }
 
 .carriers-section-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
-  height: 20vh;
+  height: 14vh;
+  background: #E0E5FA;
 }
 
 .carriers-icon {
@@ -135,6 +137,13 @@
   font-size: 2rem;
 }
 
+.navbar-logo-container {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
 .ui.checkbox label:before {
   width: 2rem;
   height: 2rem;
@@ -149,3 +158,4 @@
   justify-content: center;
   align-items: center;
 }
+

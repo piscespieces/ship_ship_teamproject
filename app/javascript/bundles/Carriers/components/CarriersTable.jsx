@@ -54,7 +54,7 @@ const CarriersTable = ({ carriers, selectedServices, handleOptionChange, finalSe
                const selectedService = carriers[carrierName][selectedServices[carrierName]]
                const selectedServiceName = selectedServices[carrierName]
                return (
-                  <tr key={carrierName}>
+                  <tr className="carriers-tr" key={carrierName}>
                      <td className="carriers-table-carrier">
                         <div className="logo-img-container">
                            <img className={carrierName} src={CARRIER_IMAGE_MAP[carrierName]} alt="carrier" />
