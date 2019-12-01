@@ -17,12 +17,36 @@ const Label = props => {
             </div>
             <div className="label-rightside">
                <ul className="label-ul">
-                  <li>Email</li>
-                  <li>Download</li>
-                  <li>Print</li>
-                  <li>Save</li>
-                  <li>DONE!</li>
-                  <li>CREATE NEW!</li>
+                  <li>
+                     <a href="">
+                        Email
+                     </a>
+                  </li>
+                  <li>
+                     <a href="">
+                        Download
+                     </a>
+                  </li>
+                  <li>
+                     <a href="">
+                        Print
+                     </a>
+                  </li>
+                  <li>
+                     <a href="">
+                        Save
+                     </a>
+                  </li>
+                  <li>
+                     <a href={'/dashboard' || '/'}>
+                        DONE!
+                     </a>
+                  </li>
+                  <li>
+                     <a href="">
+                        CREATE NEW!
+                     </a>
+                  </li>
                </ul>
             </div>
          </main>
