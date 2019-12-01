@@ -6,7 +6,7 @@
     <div class="shipment-to-wrap">
       <div>
         <%= label_tag(:to_street1, "Street1") %>
-        <%= text_field_tag(:to_street1) %>
+        <%= text_field_tag(:to_street1, nil, required: true)%>
       </div>
       <div>
         <%= label_tag(:to_street2, "Street2") %>
@@ -14,27 +14,27 @@
       </div>
       <div>
         <%= label_tag(:to_city, "City") %>
-        <%= text_field_tag(:city) %>
+        <%= text_field_tag(:city, nil, required:true) %>
       </div>
       <div>
         <%= label_tag(:to_state, "State") %>
-        <%= text_field_tag(:to_state) %>
+        <%= text_field_tag(:to_state, nil, required:true) %>
       </div>
       <div>
         <%= label_tag(:to_zip, "Zip") %>
-        <%= text_field_tag(:to_zip) %>
+        <%= text_field_tag(:to_zip, nil, required:true) %>
       </div>
       <div>
         <%= label_tag(:to_country, "Country") %>
-        <%= text_field_tag(:to_country) %>
+        <%= text_field_tag(:to_country, nil, required:true) %>
       </div>
       <div>
-        <%= label_tag(:to_company, "Company") %>
-        <%= text_field_tag(:to_company) %>
+        <%= label_tag(:to_company, "Name") %>
+        <%= text_field_tag(:to_company, nil, required:true) %>
       </div>
       <div>
         <%= label_tag(:to_phone, "Phone") %>
-        <%= text_field_tag(:to_phone) %>
+        <%= text_field_tag(:to_phone, nil, required:true) %>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@
     <div class="shipment-from-wrap">
     <div>
       <%= label_tag(:from_street1, "Street1") %>
-      <%= text_field_tag(:from_street1, current_user&.primary_location&.street1) %>
+      <%= text_field_tag(:from_street1, current_user&.primary_location&.street1, required:true) %>
     </div>
     <div>
       <%= label_tag(:from_street2, "Street2") %>
@@ -52,32 +52,32 @@
     </div>
     <div>
       <%= label_tag(:from_city, "City") %>
-      <%= text_field_tag(:from_city, current_user&.primary_location&.city) %>
+      <%= text_field_tag(:from_city, current_user&.primary_location&.city, required:true) %>
     </div>
     <div>
       <%= label_tag(:from_state, "State") %>
-      <%= text_field_tag(:from_state, current_user&.primary_location&.state) %>
+      <%= text_field_tag(:from_state, current_user&.primary_location&.state, required:true) %>
     </div>
     <div>
       <%= label_tag(:from_zip, "Zip") %>
-      <%= text_field_tag(:from_zip, current_user&.primary_location&.zip) %>
+      <%= text_field_tag(:from_zip, current_user&.primary_location&.zip, required:true) %>
     </div>
     <div>
       <%= label_tag(:from_country, "Country") %>
-      <%= text_field_tag(:from_country, current_user&.primary_location&.country) %>
+      <%= text_field_tag(:from_country, current_user&.primary_location&.country, required:true) %>
     </div>
     <div>
-      <%= label_tag(:from_company, "Company") %>
-      <%= text_field_tag(:from_company, current_user&.profile&.name) %>
+      <%= label_tag(:from_company, "Name") %>
+      <%= text_field_tag(:from_company, current_user&.profile&.name, required:true) %>
     </div>
     <div>
       <%= label_tag(:from_phone, "Phone") %>
-      <%= text_field_tag(:from_phone, current_user&.profile&.phone) %>
+      <%= text_field_tag(:from_phone, current_user&.profile&.phone, required:true) %>
     </div>
     <% if user_signed_in? %>
-      <div>
-          <%= label_tag :save %>
-          <%= select_tag :save, options_for_select(["No", "Yes", "Save as Primary Location"]), class:"drop-down" %>
+      <div class="shipment-drop-down">
+          <%= label_tag :save%>
+          <%= select_tag :save, options_for_select(["No", "Yes", "Save as Primary Location"]) %>
       </div>
     <% end %>
     <%= submit_tag('Submit!    ', data: { disable_with: "Processing..." },class: "shipment-button") %>

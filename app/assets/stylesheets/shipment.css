@@ -4,12 +4,13 @@
   height: 100vh;
   position: relative;
   font-family: 'Comfortaa', cursive;
+  user-select: none;
 }
 
 .shipment-to-h1{
   position: relative;
   color: #4D5C99;
-  margin: 2rem 2rem 0 2rem;
+  margin: 2rem 0 0 8rem;
 }
 
 .shipment-to-address {
@@ -49,7 +50,7 @@
   color: #4D5C99;
   position: relative;
   width: 100%; 
-  margin: 2rem 2rem 0 2rem;
+  margin: 2rem 0 0 2rem;
 }
 
 .shipment-from-address {
@@ -102,7 +103,7 @@
   vertical-align: middle;
   cursor: pointer;
   text-align:center;
-  margin-top:2rem;
+  margin-top:3.5rem;
   height: 2.5rem;
 }
 
@@ -120,8 +121,6 @@
   --accentFg: white;
   --accentBg: #A9B8F7;
 }
-
-
 
 select {
   font-family:'Comfortaa', cursive;
@@ -162,4 +161,12 @@ select:active {
   color: var(--basefg);
   border-color: var(--baseFg);
   background-color: var(--baseFg);
+}
+
+.shipment-drop-down label{
+margin-right:0;
+}
+
+.shipment-drop-down{
+  margin-top:1rem;  
 }
