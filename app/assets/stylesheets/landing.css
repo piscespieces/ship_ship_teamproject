@@ -212,7 +212,7 @@ p.notice, p.alert {
 
 .landing-contact-header {
   width: 80vw;
-  height: 15vh;
+  height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,6 +221,7 @@ p.notice, p.alert {
 
 .landing-contact-header h1{
 color:rgba(224,229,250,1);
+margin-bottom: 0;
 text-shadow: -1px 0 #FFC7A6, 0 1px #FFC7A6, 1px 0 #FFC7A6, 0 -1px #FFC7A6;
 }
 
@@ -244,7 +245,7 @@ text-shadow: -1px 0 #FFC7A6, 0 1px #FFC7A6, 1px 0 #FFC7A6, 0 -1px #FFC7A6;
 }
 
 .eric, .brendan, .andres {
-  width: 20vw;
+  width: 15vw;
   border-radius: 50%
 }
 
@@ -256,6 +257,7 @@ text-shadow: -1px 0 #FFC7A6, 0 1px #FFC7A6, 1px 0 #FFC7A6, 0 -1px #FFC7A6;
 .landing-contact-form {
   width: 80vw;
   height: 55vh;
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,8 +268,8 @@ text-shadow: -1px 0 #FFC7A6, 0 1px #FFC7A6, 1px 0 #FFC7A6, 0 -1px #FFC7A6;
   width: 35vw;
 }
 
-.form-input:nth-child(1), .form-input:nth-child(2) {
-  margin-bottom: 1.5rem;
+#contact-email{
+  margin-bottom: 1rem;
 }
 
 .form-input input, .form-input textarea {
