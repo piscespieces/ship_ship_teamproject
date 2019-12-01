@@ -77,7 +77,7 @@
     <% if user_signed_in? %>
       <div>
           <%= label_tag :save %>
-          <%= select_tag :save, options_for_select(["No", "Yes", "Save as Primary Location"]) %>
+          <%= select_tag :save, options_for_select(["No", "Yes", "Save as Primary Location"]), class:"drop-down" %>
       </div>
     <% end %>
     <%= submit_tag('Submit!    ', data: { disable_with: "Processing..." },class: "shipment-button") %>
