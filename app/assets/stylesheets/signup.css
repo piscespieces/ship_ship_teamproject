@@ -1,95 +1,145 @@
-.signup-background{
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  font-family: 'Comfortaa', cursive;
-  background: linear-gradient(
-    to bottom,
-    #A9B8F7 0%,
-    #A9B8F7 50%,
-    rgba(224,229,250,1) 50%,
-    white 100%)
+.login-background{
+  display:grid;
+  grid-template-rows: 1fr 1fr;
+  height:100vh;
+  width:100vw;
 }
 
-.signup-container{
-  display: grid;
-  margin-right: 1vw;
-}
-
-.signup-field{
-  /* padding: 10px; */
-  display: grid;
-  margin-top: 1vh;
-  margin-left: 20px;
-}
-
-.signup-field input{
-  outline: 0;
-  border-width: 0 0 1px;
-  border-color: black;
-  width: 225px;
-  height: 20px;
-  margin-top: 20px;
-  text-indent: 0.5rem;
-  font-size: 15px;
-}
-
-.signup-submit {
-  position: relative;
-  top: 10vh;
-  border: none; 
-  background:none;  
-  color: white;
-  font-size: 55px;
-  left: 6.5vw;
-  cursor: pointer;
-}
-
-.signup-actions{
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-}
-
-#signup-packages{
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  margin-left: 2vw;
-}
-
-.signup-header{
-  position: absolute;
-  top: 5vh;
-  left: 38vw;
-  font-size: 80px;
-  color: white;
-  font-weight: bolder;
-  
-}
-.signup-login-link{
-  position: relative;
-  text-decoration: none;
-  top:31vh;
-  right:3.5vw;
-  font-size:50px;
+.login-header{
+  display:grid;
+  justify-content:center;
+  font-size:2.5rem;
   color:white;
-  /* background:#A9B8F7; */
-}
-/* .signup-ship1{
-  position: absolute;
-  top: 55vh;
-  left: 49.5vw;  
-  font-size: 55px;
-  color: white;
-  transform: skewY(0.5deg);
 }
 
-.signup-ship2{
+
+.login-container form{
+  display: block;
+  text-align:center;
+  margin-top:50px;
+  outline:none;
+}
+
+.login-container label{
+  color:white;
+  font-size:25px;
+}
+
+.login-field{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.login-sign-up{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.signup-email input{
+  outline:none;
+}
+
+.login-field input{
+  outline:none;
+  font-family: 'Comfortaa', cursive;
+}
+.signup-actions button{
+  margin-top:20px;
+}
+
+.signup-error{
   position: absolute;
-  top: 71.5vh;
-  left: 61.5vw;  
-  font-size: 55px;
-  color: white;
-  transform: skewY(0.5deg);  
-} */
+  right:5rem;
+  bottom:5rem;
+  color:#A9B8F7;
+
+}
+
+.signup-submit{
+    background: #A9B8F7;
+    font-family: 'Comfortaa', cursive;
+    background-image: -webkit-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: -moz-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: -ms-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: -o-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: linear-gradient(to bottom, #A9B8F7, #A9B8F7);
+    border-radius: 13px;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding: .5rem;
+    box-shadow: inset 0px 0px 9px 0px #FFC7A6;
+    text-shadow: 1px 1px 3px #FFC7A6;
+    border: solid #FFC7A6 2px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top:20px;
+ }
+ .signup-submit:hover {
+    background: #FFC7A6;
+    border: solid #FFC7A6 1px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
+
+
+.login-forgot-password{
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+
+}
+
+.login-image-container{
+  display:flex;
+  position: absolute;
+  justify-content:flex-start;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 5;
+}
+
+
+.login-image-container svg{
+  position: relative;
+  height: 100%;
+  width: 20rem;
+}
+/* login svg */
+#page-3, #page-5{
+  animation-name: page1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+  @keyframes page1{
+    0% { transform: translatey(0px); }
+  25% { transform: translatey(20px); }
+  50% { transform: translatey(-90px); }
+  75% { transform: translatey(15px); }
+  100% { transform: translateY(0px)}
+  }
+
+#page-1, #page-6{
+  animation-name: page2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes page2{
+  0% { transform: translatey(0px); }
+50% { transform: translatey(50px); }
+75% { transform: translatey(-25px); }
+100% { transform: translateY(0px)}
+}
+
+  #page-2, #page-4, #page-5_2{
+  animation-name: page2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+  

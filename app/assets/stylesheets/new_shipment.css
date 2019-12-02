@@ -1,7 +1,9 @@
 .new-shipment-background{
   display: grid;
+  position:fixed;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
+  width:100vw;
   font-family: 'Comfortaa', cursive;
   color: #4D5C99;
   }
@@ -81,26 +83,30 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .new-shipment-inputs button{
-  font-size: 35px;
-  margin-top: 2rem;
-	box-shadow:inset 0px 1px 3px 0px #4d5c99;
-	background:linear-gradient(to bottom, #ffc7a6 5%, #E0E5FA 100%);
-	background-color:#ffc7a6;
-	border-radius:5px;
-	border:1px solid #00000c;
-	display:inline-block;
-	cursor:pointer;
-	color:#4d5c99;
-	font-size:15px;
-	padding:11px 23px;
-	text-decoration:none;
-	text-shadow:0px -1px 0px #4d5c99;
+  background: #A9B8F7;
+    font-family: 'Comfortaa', cursive;
+    background-image: -webkit-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: -moz-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: -ms-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: -o-linear-gradient(top, #A9B8F7, #A9B8F7);
+    background-image: linear-gradient(to bottom, #A9B8F7, #A9B8F7);
+    border-radius: 13px;
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding: 1rem;
+    box-shadow: inset 0px 0px 9px 0px #FFC7A6;
+    text-shadow: 1px 1px 3px #FFC7A6;
+    border: solid #FFC7A6 2px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top:50px;
+    outline:none;
 }
 .new-shipment-inputs button:hover {
-	background:linear-gradient(to bottom, #E0E5FA 5%, #ffc7a6 100%);
-	background-color:#4d5c99;
-}
-.new-shipment-inputs button:active {
-	position:relative;
-	top:1px;
+  background: #FFC7A6;
+  border: solid #FFC7A6 1px;
+  border-radius: 20px;
+  text-decoration: none;
 }

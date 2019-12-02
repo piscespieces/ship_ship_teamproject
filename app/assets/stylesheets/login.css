@@ -8,7 +8,7 @@
 .login-header{
   display:grid;
   justify-content:center;
-  font-size:45px;
+  font-size:2.5rem;
   color:white;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .login-remember-me label{
-  font-size: 1rem;
+  font-size: 0.5rem;
   margin-right: 1rem;
 }
 .login-field input{
@@ -69,6 +69,7 @@
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    outline:none;
  }
  .login-submit:hover {
     background: #FFC7A6;
