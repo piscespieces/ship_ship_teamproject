@@ -22,7 +22,8 @@ class ShipmentsController < ApplicationController
       end
     end
 
-    current_user.locations.find_or_create_by(get_params[:to])
+    @location = current_user.locations.find_or_create_by(get_params[:to])
+    @location.update(shipment_id: @shipment[:id])
     redirect_to "/shipments/#{@shipment[:id]}"
   end
 
@@ -31,13 +32,14 @@ class ShipmentsController < ApplicationController
     shipment_id = params[:id]
     shipment = EasyPost::Shipment.retrieve(shipment_id)
     shipment.buy(rate: { id: rate_id })
+    ShipmentLabel.create(shipment_id: shipment_id, label_url: shipment[:postage_label][:label_url])
     render json: { location: "/shipments/#{shipment[:id]}" }
   end
 
   def show
-
     shipment_id = params[:id]
     @shipment = EasyPost::Shipment.retrieve(shipment_id)
+    @shipment_label = ShipmentLabel.find_by(shipment_id: shipment_id)
   end 
 
   private 

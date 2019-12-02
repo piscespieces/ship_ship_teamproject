@@ -65,9 +65,10 @@
         </div>
         <div class="text">
           <p class="title">
-            Created: <%= location.created_at.strftime('%m/%d/%y') %>
+            Created: <%= location[:created_at].strftime('%m/%d/%y') %>
           </p>
         </div>
+      
       </div>
     <% end %>
   </div>
