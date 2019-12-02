@@ -54,7 +54,7 @@
 
 <div class="dashboard-location-container-wrapper">
   <div class=dashboard-location-container>
-    <h1>Shipment Locations History </h1>
+    <h1>Locations History </h1>
     <% @locations.each do |location| %>
       <div class="d-super-box">
         <div class="d-container">
@@ -75,11 +75,11 @@
     <% end %>
   </div>
    <div class=dashboard-location-container>
-    <h1>Shipment Labels History </h1>
+    <h1>Labels History </h1>
     <% @locations.each do |location| %>
       <div class="d-super-box">
         <div class="d-container">
-          <div class="d-box" data-content="<%= @keys.map{ |k| location[k] }.join(', ') %>">
+          <div class="d-box" data-content="<%= location[:shipment_label]&.label_url %> ">
             <div class="d-icon_bg"></div>
           </div>
           <div class="d-icon">
@@ -94,4 +94,5 @@
     <% end %>
   </div>
 </div>
+  
   
