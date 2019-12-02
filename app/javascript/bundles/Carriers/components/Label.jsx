@@ -43,7 +43,7 @@ const Label = props => {
                      </a>
                   </li>
                   <li>
-                     <a href="">
+                     <a href="/parcels/new">
                         CREATE NEW!
                      </a>
                   </li>
