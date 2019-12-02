@@ -15,7 +15,7 @@
 
 .new-shipment-input-inner-layer{
   position: relative;
-  margin-top: 15%;
+  margin-top: 2rem;
 }
 
 .new-shipment-title{
@@ -29,6 +29,7 @@
   background: linear-gradient(25deg, #A9B8F7 0%, rgba(224,229,250,1) 100%);
   text-align: center;
   position: relative;
+  height: 100vh;
 }
 
 .new-shipment-inputs span{
