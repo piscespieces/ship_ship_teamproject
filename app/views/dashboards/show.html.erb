@@ -79,15 +79,14 @@
     <% @locations.each do |location| %>
       <div class="d-super-box">
         <div class="d-container">
-          <div class="d-box" data-content="<%= location[:shipment_label]&.label_url %> ">
-            <div class="d-icon_bg"></div>
-          </div>
-          <div class="d-icon">
+          <div class="d-box" data-content="">     
           </div>
         </div>
         <div class="d-text">
           <p class="d-title">
-            Created: <%= location[:created_at].strftime('%m/%d/%y') %>
+          <% if location[:shipment_label]&.label_url %> 
+          <%= image_tag location[:shipment_label]&.label_url, :class => "dash-img_label" %> 
+          <% end %>
           </p>
         </div>
       </div>
