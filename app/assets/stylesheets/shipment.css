@@ -5,12 +5,14 @@
   position: relative;
   font-family: 'Comfortaa', cursive;
   user-select: none;
+  font-size: 1.5rem;
 }
 
 .shipment-to-h1{
   position: relative;
   color: #4D5C99;
-  margin: 2rem 0 0 8rem;
+  padding-top: 3rem;
+  margin-left: 8rem;
 }
 
 .shipment-to-address {
@@ -21,8 +23,8 @@
 
 .shipment-to-wrap{
   position: absolute;
-  top: 15%;
-  left: 15%
+  top: 20%;
+  left: 20%;
 }
 
 .shipment-to-address label{
@@ -50,7 +52,9 @@
   color: #4D5C99;
   position: relative;
   width: 100%; 
-  margin: 2rem 0 0 2rem;
+  margin-left: 2rem;
+  padding-top: 3rem;
+
 }
 
 .shipment-from-address {
@@ -60,8 +64,8 @@
 
 .shipment-from-wrap{
   position: absolute;
-  top: 15%;
-  left: 15%
+  top: 20%;
+  left: 20%;
 }
 
 .shipment-from-address label{
