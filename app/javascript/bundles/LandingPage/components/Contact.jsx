@@ -7,7 +7,7 @@ import andres from '../../../../assets/images/UrdanetaAndres';
 const Contact = () => {
    return (
       <Element name="landing-scroll-contact" className="element" >
-         <section class="contact-color">
+         <section className="contact-color">
             <div className="landing-team">
                <div className="landing-contact-header">
                   <h1>Contact Us</h1>

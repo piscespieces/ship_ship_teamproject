@@ -64,11 +64,13 @@
           <div class="d-icon">
           </div>
         </div>
-        <div class="d-text">
-          <p class="d-title">
-            Created: <%= location.created_at.strftime('%m/%d/%y') %>
+
+        <div class="text">
+          <p class="title">
+            Created: <%= location[:created_at].strftime('%m/%d/%y') %>
           </p>
         </div>
+      
       </div>
     <% end %>
   </div>
