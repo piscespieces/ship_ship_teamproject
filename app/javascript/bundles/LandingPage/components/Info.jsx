@@ -30,7 +30,7 @@ const Info = () => {
                            </div>
                         </div>
                         <p className="landing-card-footer">
-                           this is just a placeholder, we gotta add some information about how to actually build the packages...
+                        The shipship enterprise is proud to present our interactive three dimensional package builder. It was created with the mindset that the package label industry should be fun and easy!
                      </p>
                      </div>
 
@@ -46,7 +46,7 @@ const Info = () => {
                            </div>
                         </div>
                         <p className="landing-card-footer">
-                           this is just a placeholder, we gotta add some information about how to actually build the packages...
+                        After using our package builder you will be prompted to give a To and From address which we’ll use to find your carrier options!
                      </p>
                      </div>
 
@@ -62,7 +62,7 @@ const Info = () => {
                            </div>
                         </div>
                         <p className="landing-card-footer">
-                           this is just a placeholder, we gotta add some information about how to actually build the packages...
+                        The best part is that we provide all of the competitors prices in one place. Once you make your selection a new label will be provided to you. If popularity rises, maybe we’ll provide a competitive market for cheaper shipping!!!!!!!!!!!!!!!
                         </p>
                      </div>
                   </div>
