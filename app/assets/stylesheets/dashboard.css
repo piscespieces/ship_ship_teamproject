@@ -4,11 +4,15 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   font-family: 'Comfortaa', cursive;
+  user-select: none;
 }
 
 .dashboard-main h1{
+  margin: 2rem 0 4rem 0;
   grid-column: 2;
   text-align: center;
+  color: #4D5C99;
+  font-size: 2.5rem;
 }
 
 .dashboard-account{
@@ -16,12 +20,13 @@
   grid-column-start: 0;
   grid-row-start: 2;
   text-align: center;
+  color: #4D5C99;
 }
 
 .dashboard-account-container{
   width: 250px;
   text-align: center;
-  margin-left: 0;
+  margin: 25% 0 0 15%;
   user-select: none;
   outline: none;
   outline-width: 0;
@@ -29,19 +34,17 @@
 
 .dashboard-account label{
   display: inline-block;
-
   width: 100px;
   text-align: left;
+  margin-top: .5rem;
 }
 
 .dashboard-account input{
-  text-indent: 1rem;
+  text-indent: .5rem;
   position: relative;
   outline: none;
-  /* user-select: none;
-  outline: none;
-  outline-width: 0; */
-
+  margin-top: 1rem;
+  border: none;
 }
 
 .dashboard-create{
@@ -50,19 +53,27 @@
   text-align: center;
   }
 
-.dashboard-location-container{
+.dashboard-location-container-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   overflow: auto;
+
 }
 
-.container {
+
+.dashboard-location-container h1{
+  font-size: 1.5rem;
+}
+
+.d-container {
   width: 220px;
   height: 220px;
   display: flex;
-          justify-content: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.box {
+.d-box {
   position: absolute;
   width: 220px;
   height: 220px;
@@ -75,7 +86,7 @@
   transition: box-shadow ease 1s;
 }
 
-.icon {
+.d-icon {
   position: relative;
   margin-top: 8px;
   transition: all 0.6s ease;
@@ -83,7 +94,7 @@
   will-change: transform;
 }
 
-.icon_bg {
+.d-icon_bg {
   width: 80px;
   height: 80px;
   border-radius: 100%;
@@ -98,20 +109,20 @@
   will-change: transform;
 }
 
-.super-box:hover .box {
+.d-super-box:hover .d-box {
   box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
   transition-delay: 0.32s;
 }
 
-.super-box:hover .icon_bg {
+.d-super-box:hover .d-icon_bg {
   transform: translateY(-32px) scale(6);
 }
 
-.super-box:hover .icon {
+.d-super-box:hover .d-icon {
   transform: translateY(-48px) scale(1.4);
 }
 
-.super-box {
+.d-super-box {
   position: relative;
   width: 220px;
   height: 220px;
@@ -121,7 +132,7 @@
   flex-direction: column;
 }
 
-.text {
+.d-text {
   position: relative;
   top: -32px;
   width: 200px;
@@ -130,12 +141,12 @@
   transition-delay: 0.32s;
 }
 
-.super-box:hover .text {
+.d-super-box:hover .d-text {
   opacity: 0;
   transform: translateY(-4px) scale(.8);
 }
 
-.box::after {
+.d-box::after {
   content: attr(data-content);
   position: absolute;
   opacity: 0;
@@ -145,7 +156,7 @@
   transition-delay: 0.32s;
 }
 
-.super-box:hover .box::after {
+.d-super-box:hover .d-box::after {
   opacity: 1;
 }
 
@@ -157,7 +168,7 @@
 }
 .dashboard-create a{
   background: #A9B8F7;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa';
     background-image: -webkit-linear-gradient(top, #A9B8F7, #A9B8F7);
     background-image: -moz-linear-gradient(top, #A9B8F7, #A9B8F7);
     background-image: -ms-linear-gradient(top, #A9B8F7, #A9B8F7);
@@ -174,8 +185,9 @@
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    margin-top:15px;
-    margin-left:80px;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
 }
 .dashboard-create a:hover {
   background: #FFC7A6;
