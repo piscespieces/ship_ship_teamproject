@@ -7,13 +7,18 @@
   display: flex;
   justify-content: space-around;
   width: 100vw;
-  height: 20vh;
+  height: 15vh;
 }
 
 .carriers-header-header {
     display: flex;
     align-items: center;
-    color: #4D5C99;
+    color: #273338;
+}
+
+.carriers-header-header h1 {
+  font-size: 2.5rem;
+  font-family: 'Comfortaa', cursive;
 }
 
 .carriers-tablehead {
@@ -22,27 +27,47 @@
 }
 
 .carriers-tablehead-tr {
-  height: 5vh;
+  height: 10vh;
+}
+
+.carriers-tr {
+  height: 20vh;
 }
 
 .carriers-tablehead-th {
+  font-size: 1.2rem;
+  width: 20vw;
   color: #FFC7A6;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .carriers-main {
   width: 100vw;
-  height: 80vh;
+  /* height: 95vh; */
 }
 
 .carriers-table {
   width: 100vw;
-  height: 90vh;
+  /* height: 90vh; */
   background: white;
 }
 
 .carriers-table-carrier {
+  background: #404040;
   text-align: center;
+}
+
+.logo-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FedEx {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carriers-table-select-cell {
@@ -51,12 +76,19 @@
 
 .carriers-table-rates {
   text-align: center;
+  background: rgba(77, 92, 153, 0.4);
 }
 
+/* 
 .carriers-table-rates ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+} */
+
+.carriers-table-delivery {
+  text-align: center;
+  background: rgba(223, 229, 249, 0.4)
 }
 
 .carriers-checkbox {
@@ -64,6 +96,80 @@
 }
 
 .carriers-section-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
-  height: 20vh;
+  height: 14vh;
+  background: #E0E5FA;
+}
+
+.carriers-icon {
+  color: black;
+}
+
+#carriers-select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 1px solid rgba(39, 51, 56, 0.5);
+  border-radius: 0;
+  appearance: none;
+}
+
+#carriers-select:hover {
+  color: black;
+  background: lightgray;
+}
+
+#rate, #delivery {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.navbar-logo-container {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.ui.checkbox label:before {
+  width: 2rem;
+  height: 2rem;
+  background: #E0E5FA;
+}
+
+.ui.checkbox input:checked~label:after {
+  content: '\e800';
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.carriers-submit-btn {
+  background: #A9B8F7;
+  background-image: linear-gradient(to bottom, #A9B8F7, #A9B8F7);
+  border-radius: 13px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: .6rem .8rem .6rem .8rem;
+  box-shadow: inset 0px 0px 9px 0px #FFC7A6;
+  text-shadow: 1px 1px 3px #FFC7A6;
+  border: solid #FFC7A6 2px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.carriers-submit-btn:hover {
+  background: #FFC7A6;
+  border: solid #FFC7A6 1px;
+  border-radius: 20px;
+  text-decoration: none;
 }

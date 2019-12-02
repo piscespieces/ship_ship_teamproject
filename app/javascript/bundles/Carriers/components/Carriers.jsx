@@ -1,5 +1,6 @@
 import React from 'react'
 import CarriersTable from './CarriersTable'
+import NavbarLogo from './NavbarLogo'
 import Label from './Label'
 import axios from 'axios'
 
@@ -59,8 +60,11 @@ export default class Carriers extends React.Component {
         return (
             <>
                 <div className="carriers-header">
+                    <div className="navbar-logo-container">
+                        <NavbarLogo />
+                    </div>
                     <div className="carriers-header-header">
-                        <h1>SELECT A CARRIER</h1>
+                        <h1>Select A Carrier</h1>
                     </div>
                 </div>
                 <main className="carriers-main">
@@ -76,8 +80,8 @@ export default class Carriers extends React.Component {
                     {
                         finalSelection.service &&
                         <>
-                            <p>You selected {finalSelection.carrier}: {finalSelection.service} ({finalSelection.id})</p>
-                            <button onClick={() => this.confirmSelection(finalSelection)}>
+                            <p className="carriers-selection">You selected {finalSelection.carrier}: {finalSelection.service}</p>
+                            <button className="carriers-submit-btn" onClick={() => this.confirmSelection(finalSelection)}>
                                 Print Label
                             </button>
                         </>
