@@ -1,87 +1,92 @@
 <div class="edit-profile-background"> 
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
-<div class="edit-profile-name">
-  <%= form_with url: profile_url, method: :patch do |form| %>
-    <div>
-      <%= form.label :name, "Company / Name" %>
-      <%= form.text_field :name, value: current_user.profile&.name %>
-    </div>
-    <div>
-      <%= form.label :phone %>
-      <%= form.text_field :phone, value: current_user.profile&.phone %>
-    </div>
+  <div class="edit-container">
+    <div class="edit-profile-name">
+      <%= form_with url: profile_url, method: :patch do |form| %>
+        <div>
+        <h3>Update profile name</h3>
+          <%= form.label :name, "Company / Name" %>
+          <%= form.text_field :name, value: current_user.profile&.name %>
+        </div>
+        <div>
+          <%= form.label :phone %>
+          <%= form.text_field :phone, value: current_user.profile&.phone %>
+        </div>
 
-    <%= form.submit "Update Profile" %>
-  <% end %>
-</div>
-<div class="edit-profile-location">
-  <%= form_with url: location_url, method: :patch do |form| %>
-    <div>
-      <%= form.label :street1 %>
-      <%= form.text_field :street1, value: current_user.primary_location&.street1 %>
-    </div>
-    <div>
-      <%= form.label :street2 %>
-      <%= form.text_field :street2, value: current_user.primary_location&.street2 %>
-    </div>
-    <div>
-      <%= form.label :city %>
-      <%= form.text_field :city, value: current_user.primary_location&.city %>
-    </div>
-    <div>
-      <%= form.label :state %>
-      <%= form.text_field :state, value: current_user.primary_location&.state %>
-    </div>
-    <div>
-      <%= form.label :zip %>
-      <%= form.text_field :zip, value: current_user.primary_location&.zip %>
-    </div>
-    <div>
-      <%= form.label :country %>
-      <%= form.text_field :country, value: current_user.primary_location&.country %>
-    </div>
-    <%= form.submit "Update Primary Location" %>
-  <% end%>
-</div>
-<div class="edit-profile-password-form">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
-
-    <div class="field">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :password %> <i>(leave blank to not change)</i>
-      <%= f.password_field :password, autocomplete: "new-password" %>
-      <% if @minimum_password_length %>
-        <em><%= @minimum_password_length %> characters minimum</em>
+        <%= form.submit "Update Profile" %>
       <% end %>
     </div>
-    <div class="field">
-      <%= f.label :confirm_password %>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <div class="edit-profile-location">
+      <%= form_with url: location_url, method: :patch do |form| %>
+        <div>
+        <h3>Update profile location</h3>
+          <%= form.label :street1 %>
+          <%= form.text_field :street1, value: current_user.primary_location&.street1 %>
+        </div>
+        <div>
+          <%= form.label :street2 %>
+          <%= form.text_field :street2, value: current_user.primary_location&.street2 %>
+        </div>
+        <div>
+          <%= form.label :city %>
+          <%= form.text_field :city, value: current_user.primary_location&.city %>
+        </div>
+        <div>
+          <%= form.label :state %>
+          <%= form.text_field :state, value: current_user.primary_location&.state %>
+        </div>
+        <div>
+          <%= form.label :zip %>
+          <%= form.text_field :zip, value: current_user.primary_location&.zip %>
+        </div>
+        <div>
+          <%= form.label :country %>
+          <%= form.text_field :country, value: current_user.primary_location&.country %>
+        </div>
+        <%= form.submit "Update Primary Location" %>
+      <% end%>
     </div>
-    <div class="field">
-      <%= f.label :current_password %> 
-      <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <div class="edit-profile-password-form">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <h3>Update password</h3>
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :new_password %> 
+          <%= f.password_field :password, autocomplete: "new-password" %>
+          <% if @minimum_password_length %>
+            <em><%= @minimum_password_length %> characters minimum</em>
+          <% end %>
+        </div>
+        <div class="field">
+          <%= f.label :confirm_password %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
+        <div class="field">
+          <%= f.label :current_password %> 
+          <%= f.password_field :current_password, autocomplete: "current-password" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Update" %>
+        </div>
+      <% end %>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Update" %>
-    </div>
-  <% end %>
-</div>
-
-<div class="edit-profile-cancel">
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-</div>  
-  <div class="edit-profile-back">
-    <%= link_to "Back", :back %>
-  </div>  
+      <div class="edit-profile-cancel">
+        <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      </div>  
+      <div class="edit-profile-back">
+        <%= link_to "Back", :back %>
+      </div>  
+  </div>
 </div>
