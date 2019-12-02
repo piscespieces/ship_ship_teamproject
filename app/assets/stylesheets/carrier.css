@@ -166,6 +166,7 @@
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  outline: none;
 }
 .carriers-submit-btn:hover {
   background: #FFC7A6;
