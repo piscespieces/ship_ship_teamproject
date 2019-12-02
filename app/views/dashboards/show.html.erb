@@ -52,17 +52,19 @@
     <% end %> 
   </div>
 
+<div class="dashboard-location-container-wrapper">
   <div class=dashboard-location-container>
-    <h1>Locations History </h1>
+    <h1>Shipment Locations History </h1>
     <% @locations.each do |location| %>
-      <div class="super-box">
-        <div class="container">
-          <div class="box" data-content="<%= @keys.map{ |k| location[k] }.join(', ') %>">
-            <div class="icon_bg"></div>
+      <div class="d-super-box">
+        <div class="d-container">
+          <div class="d-box" data-content="<%= @keys.map{ |k| location[k] }.join(', ') %>">
+            <div class="d-icon_bg"></div>
           </div>
-          <div class="icon">
+          <div class="d-icon">
           </div>
         </div>
+
         <div class="text">
           <p class="title">
             Created: <%= location[:created_at].strftime('%m/%d/%y') %>
@@ -72,3 +74,24 @@
       </div>
     <% end %>
   </div>
+   <div class=dashboard-location-container>
+    <h1>Shipment Labels History </h1>
+    <% @locations.each do |location| %>
+      <div class="d-super-box">
+        <div class="d-container">
+          <div class="d-box" data-content="<%= @keys.map{ |k| location[k] }.join(', ') %>">
+            <div class="d-icon_bg"></div>
+          </div>
+          <div class="d-icon">
+          </div>
+        </div>
+        <div class="d-text">
+          <p class="d-title">
+            Created: <%= location.created_at.strftime('%m/%d/%y') %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+  
